@@ -326,17 +326,40 @@ function showLipasNotice() {
   This website does not provide financial, payment, or investment services.
 </footer>
 <script>
-  .qupay-core::before,
-.qupay-core::after {
-  content: "";
+  /* QUPAY CORE – LAYERED TRANSITION */
+.qupay-core {
   position: absolute;
-  inset: -18%;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(0,255,200,0.18),
-    rgba(0,255,200,0.08),
-    transparent 70%
+  z-index: 2;
+
+  /* KATMANLI GEÇİŞ */
+  background:
+    radial-gradient(
+      circle,
+      #ffffff 0%,
+      #ffffff 38%,
+      rgba(0, 255, 200, 0.9) 48%,
+      rgba(0, 255, 200, 0.55) 62%,
+      rgba(0, 255, 200, 0.25) 75%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+  box-shadow:
+    0 0 40px rgba(0,255,200,0.35),
+    0 0 80px rgba(0,255,200,0.25),
+    0 0 140px rgba(0,255,200,0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: coreBreath 5s ease-in-out infinite;
+}
   );
   animation: haloBreath 6s ease-in-out infinite;
 }
@@ -352,9 +375,15 @@ function showLipasNotice() {
   50% { transform: scale(1.05); opacity: 0.9; }
 }
   .qupay-core img {
-  animation:
-    qupayPulse 3.5s ease-in-out infinite,
-    slowRotate 28s linear infinite;
+  width: 75%;
+  height: auto;
+  z-index: 3;
+
+  filter:
+    drop-shadow(0 0 12px rgba(0,0,0,0.35))
+    drop-shadow(0 0 25px rgba(0,255,200,0.6));
+
+  animation: logoPulse 4s ease-in-out infinite;
 }
 
 @keyframes slowRotate {
@@ -403,6 +432,25 @@ ctx.fillStyle = `rgba(0,255,220,${glow})`;
   }
 
   animate();
+  @keyframes coreBreath {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.06);
+    opacity: 1;
+  }
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
 }
 </script>
 </body>
