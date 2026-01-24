@@ -14,10 +14,31 @@ body {
   line-height: 1.75;
 }
 
+/* NOTICE BOX */
+.notice-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #0b1320;
+  color: #ffffff;
+  padding: 24px 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 40px rgba(0,200,255,0.25);
+  text-align: center;
+  z-index: 9999;
+}
+
 header {
   text-align: center;
   padding: 120px 20px;
   background: radial-gradient(circle at top, #0c1f44, #050b16);
+}
+
+header img {
+  max-width: 220px;
+  margin-bottom: 30px;
 }
 
 header h1 {
@@ -28,55 +49,57 @@ header h1 {
 header p {
   font-size: 1.2em;
   opacity: 0.85;
+  margin-top: 10px;
 }
 
 section {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
-  padding: 80px 20px;
-  text-align: center;
+  padding: 90px 20px;
 }
 
 section h2 {
+  text-align: center;
   font-size: 2.2em;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
+}
+
+section h3 {
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 20px;
 }
 
 section p {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
   opacity: 0.9;
+}
+
+.image-block {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.image-block img {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 14px;
+  box-shadow: 0 0 45px rgba(0, 200, 255, 0.18);
 }
 
 .button {
   display: inline-block;
-  margin-top: 25px;
-  padding: 16px 30px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #1e3799, #0a3d62);
+  padding: 16px 28px;
+  margin: 10px;
+  border-radius: 8px;
+  background: linear-gradient(135deg,#1e3799,#0a3d62);
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
+  box-shadow: 0 0 20px rgba(0,180,255,0.35);
   cursor: pointer;
-  box-shadow: 0 0 25px rgba(0,180,255,0.35);
-}
-
-.notice-box {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #0b1320;
-  color: #ffffff;
-  padding: 28px 34px;
-  border-radius: 14px;
-  box-shadow: 0 0 40px rgba(0,200,255,0.25);
-  text-align: center;
-  z-index: 9999;
-}
-
-.notice-box p {
-  font-size: 14px;
-  opacity: 0.85;
 }
 
 footer {
@@ -106,36 +129,132 @@ function showLipasNotice() {
 
 <body>
 
+<!-- NOTICE -->
 <div id="lipasNotice" class="notice-box">
   <h3>Notice</h3>
   <p>
     This document is provided for technical and research transparency only.<br>
-    It does not constitute a commercial, financial, or medical offer.
+    It does not constitute a commercial, medical, or financial offer.
   </p>
   <p style="font-size:12px; opacity:0.7;">
     Download will start automatically.
   </p>
 </div>
 
+<!-- HERO -->
 <header>
+  <img src="assets/images/logo_qunet.jpg" alt="QUNET Logo">
   <h1>QUNET</h1>
   <p>Security Beyond Code. Trust Beyond Time.</p>
 </header>
 
+<!-- INTERNET EVOLUTION -->
 <section>
-  <h2>About QUNET</h2>
+  <h2>The Evolution of Internet Technologies</h2>
   <p>
-    QUNET is a conceptual research initiative exploring the future of
-    quantum-secure communication, authorization, and network trust models.
-    All content is informational and non-binding.
+    The internet has evolved from early research networks into a
+    global infrastructure supporting cloud computing, artificial
+    intelligence, and connected systems. QUNET explores the
+    next conceptual stage of this evolution: quantum networking.
+  </p>
+  <div class="image-block">
+    <img src="assets/images/internet_evolution.jpg" alt="Evolution of Internet">
+  </div>
+</section>
+
+<!-- QUANTUM FUTURE -->
+<section>
+  <h2>The Future Evolution of the Quantum Internet</h2>
+  <p>
+    Quantum networks are expected to expand from experimental
+    environments into global infrastructures supported by
+    quantum repeaters, fiber networks, and satellite-based links.
+  </p>
+  <div class="image-block">
+    <img src="assets/images/quantum_future.jpg" alt="Future Quantum Internet">
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <h2>How the Quantum Internet Works (Conceptual)</h2>
+  <p>
+    In a conceptual quantum internet, fixed locations such as homes
+    and research centers, as well as mobile platforms like vehicles,
+    are equipped with photon transmitters and receivers.
+    Entangled photons distributed via fiber and quantum satellites
+    enable fundamentally secure communication.
+  </p>
+  <div class="image-block">
+    <img src="assets/images/quantum_how_it_works.jpg" alt="How Quantum Internet Works">
+  </div>
+</section>
+
+<!-- SECURITY COMPARISON -->
+<section>
+  <h2>Why the Quantum Internet Is Fundamentally Secure</h2>
+  <p>
+    Classical networks rely on mathematical complexity for security.
+    Quantum communication relies on the laws of physics.
+    Any attempt to intercept or measure quantum information
+    inevitably alters its state and becomes detectable.
+  </p>
+  <div class="image-block">
+    <img src="assets/images/quantum_vs_classic.jpg" alt="Quantum vs Classical Internet">
+  </div>
+</section>
+
+<!-- VEHICLES -->
+<section>
+  <h2>Quantum Connectivity for Public and Autonomous Systems</h2>
+  <p>
+    Future transportation and autonomous systems such as
+    vehicles, drones, ships, and trains may benefit from
+    quantum-secure communication for navigation,
+    coordination, and data integrity.
+  </p>
+  <div class="image-block">
+    <img src="assets/images/public_vehicles.jpg" alt="Quantum Connectivity Vehicles">
+  </div>
+</section>
+
+<!-- SECURITY ARCHITECTURE -->
+<section style="margin-top:40px;">
+  <h3>Security Architecture</h3>
+  <p>
+    QUNET is designed with a forward-looking security approach.
+    Core authorization concepts are supported by independent technical research,
+    including biologically bound and non-transferable authorization models.
+  </p>
+  <p style="font-size:14px;">
+    Learn more about the underlying research:
+    <a href="https://lipas-research.vercel.app" target="_blank" rel="noopener">
+      LIPAS – Liveness-based Personalized Authorization System
+    </a>
   </p>
 </section>
 
+<!-- WHITEPAPER -->
+<section>
+  <h2>Whitepaper (Conceptual)</h2>
+  <p>
+    The QUNET Whitepaper presents a conceptual and research-oriented
+    overview of quantum networking principles, security foundations,
+    and possible future communication architectures.
+    <br><br>
+    This document is provided strictly for informational and
+    academic purposes and does not constitute a financial prospectus,
+    investment offer, or solicitation of any kind.
+  </p>
+</section>
+
+<!-- DOCUMENTATION -->
 <section>
   <h2>Documentation</h2>
   <p>
-    Research and technical documents are provided for transparency
-    and academic review purposes only.
+    QUNET documentation is provided for transparency and
+    research-oriented review. All documents are informational
+    and non-binding.
   </p>
 
   <div class="button" onclick="showLipasNotice()">
@@ -147,34 +266,48 @@ function showLipasNotice() {
   <a class="button"
      href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf"
      target="_blank">
-    📘 Download Whitepaper (PDF)
+     📘 Download Whitepaper (PDF)
   </a>
-
-  <br><br>
 
   <a class="button"
      href="whitepaper/QUNET_Tokenomics_ERC20_Illustrative_FINAL.pdf"
      target="_blank">
-    📊 View Tokenomics (PDF)
+     📊 View Tokenomics (PDF)
   </a>
 </section>
 
+<!-- TOKENOMICS -->
 <section>
-  <h2>Related Research</h2>
+  <h2>Tokenomics (Non-Financial Model)</h2>
   <p>
-    Independent security research related to biologically bound,
-    non-transferable authorization architectures:
+    The QUNET Token is an experimental digital reference unit
+    associated with the QUNET research initiative.
+    It does not represent ownership, governance rights,
+    payment capability, investment value, or economic utility.
+    <br><br>
+    Any future discussions of supply or distribution are purely
+    illustrative and intended solely for conceptual modeling
+    within a non-financial research context.
   </p>
-  <a class="button"
-     href="https://lipas-research.vercel.app"
-     target="_blank">
-    🔗 LIPAS Research
-  </a>
 </section>
 
+<!-- QUP -->
+<section>
+  <h2>QUP – Future Research Concept</h2>
+  <p>
+    QUP is a separately envisioned research concept that may
+    explore secure communication or protocol-level interaction
+    models in the future.
+    <br><br>
+    QUP is not an active payment system and is not currently
+    connected to any financial or transactional infrastructure.
+  </p>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  © 2026 QUNET TOKEN – Experimental & Informational Project Only<br>
-  No financial, payment, or investment services are provided.
+  © 2026 QUNETTOKEN – Experimental & Informational Project Only<br>
+  This website does not provide financial, payment, or investment services.
 </footer>
 
 </body>
