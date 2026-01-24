@@ -14,7 +14,7 @@ body {
   line-height: 1.75;
 }
 
-/* NOTICE BOX */
+/* NOTICE */
 .notice-box {
   display: none;
   position: fixed;
@@ -30,6 +30,7 @@ body {
   z-index: 9999;
 }
 
+/* HEADER */
 header {
   text-align: center;
   padding: 120px 20px;
@@ -52,6 +53,7 @@ header p {
   margin-top: 10px;
 }
 
+/* SECTIONS */
 section {
   max-width: 1200px;
   margin: auto;
@@ -77,6 +79,7 @@ section p {
   opacity: 0.9;
 }
 
+/* IMAGES */
 .image-block {
   margin-top: 50px;
   text-align: center;
@@ -89,19 +92,30 @@ section p {
   box-shadow: 0 0 45px rgba(0, 200, 255, 0.18);
 }
 
+/* BUTTON GROUP */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  margin-top: 45px;
+}
+
+/* BUTTON */
 .button {
-  display: inline-block;
+  min-width: 260px;
+  text-align: center;
   padding: 16px 28px;
-  margin: 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   background: linear-gradient(135deg,#1e3799,#0a3d62);
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 0 20px rgba(0,180,255,0.35);
+  box-shadow: 0 0 22px rgba(0,180,255,0.35);
   cursor: pointer;
 }
 
+/* FOOTER */
 footer {
   padding: 50px 20px;
   text-align: center;
@@ -190,7 +204,7 @@ function showLipasNotice() {
   </div>
 </section>
 
-<!-- SECURITY COMPARISON -->
+<!-- SECURITY -->
 <section>
   <h2>Why the Quantum Internet Is Fundamentally Secure</h2>
   <p>
@@ -204,50 +218,6 @@ function showLipasNotice() {
   </div>
 </section>
 
-<!-- VEHICLES -->
-<section>
-  <h2>Quantum Connectivity for Public and Autonomous Systems</h2>
-  <p>
-    Future transportation and autonomous systems such as
-    vehicles, drones, ships, and trains may benefit from
-    quantum-secure communication for navigation,
-    coordination, and data integrity.
-  </p>
-  <div class="image-block">
-    <img src="assets/images/public_vehicles.jpg" alt="Quantum Connectivity Vehicles">
-  </div>
-</section>
-
-<!-- SECURITY ARCHITECTURE -->
-<section style="margin-top:40px;">
-  <h3>Security Architecture</h3>
-  <p>
-    QUNET is designed with a forward-looking security approach.
-    Core authorization concepts are supported by independent technical research,
-    including biologically bound and non-transferable authorization models.
-  </p>
-  <p style="font-size:14px;">
-    Learn more about the underlying research:
-    <a href="https://lipas-research.vercel.app" target="_blank" rel="noopener">
-      LIPAS – Liveness-based Personalized Authorization System
-    </a>
-  </p>
-</section>
-
-<!-- WHITEPAPER -->
-<section>
-  <h2>Whitepaper (Conceptual)</h2>
-  <p>
-    The QUNET Whitepaper presents a conceptual and research-oriented
-    overview of quantum networking principles, security foundations,
-    and possible future communication architectures.
-    <br><br>
-    This document is provided strictly for informational and
-    academic purposes and does not constitute a financial prospectus,
-    investment offer, or solicitation of any kind.
-  </p>
-</section>
-
 <!-- DOCUMENTATION -->
 <section>
   <h2>Documentation</h2>
@@ -257,56 +227,28 @@ function showLipasNotice() {
     and non-binding.
   </p>
 
-  <div class="button" onclick="showLipasNotice()">
-    🔐 View LIPAS Security Research (PDF)
+  <div class="button-group">
+    <div class="button" onclick="showLipasNotice()">
+      🔐 View LIPAS Security Research (PDF)
+    </div>
+
+    <a class="button"
+       href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf"
+       target="_blank">
+      📘 Download Whitepaper (PDF)
+    </a>
+
+    <a class="button"
+       href="whitepaper/QUNET_Tokenomics_ERC20_Illustrative_FINAL.pdf"
+       target="_blank">
+      📊 View Tokenomics (PDF)
+    </a>
   </div>
-
-  <br><br>
-
-  <a class="button"
-     href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf"
-     target="_blank">
-     📘 Download Whitepaper (PDF)
-  </a>
-
-  <a class="button"
-     href="whitepaper/QUNET_Tokenomics_ERC20_Illustrative_FINAL.pdf"
-     target="_blank">
-     📊 View Tokenomics (PDF)
-  </a>
-</section>
-
-<!-- TOKENOMICS -->
-<section>
-  <h2>Tokenomics (Non-Financial Model)</h2>
-  <p>
-    The QUNET Token is an experimental digital reference unit
-    associated with the QUNET research initiative.
-    It does not represent ownership, governance rights,
-    payment capability, investment value, or economic utility.
-    <br><br>
-    Any future discussions of supply or distribution are purely
-    illustrative and intended solely for conceptual modeling
-    within a non-financial research context.
-  </p>
-</section>
-
-<!-- QUP -->
-<section>
-  <h2>QUP – Future Research Concept</h2>
-  <p>
-    QUP is a separately envisioned research concept that may
-    explore secure communication or protocol-level interaction
-    models in the future.
-    <br><br>
-    QUP is not an active payment system and is not currently
-    connected to any financial or transactional infrastructure.
-  </p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  © 2026 QUNETTOKEN – Experimental & Informational Project Only<br>
+  © 2026 QUNET – Experimental & Informational Project Only<br>
   This website does not provide financial, payment, or investment services.
 </footer>
 
