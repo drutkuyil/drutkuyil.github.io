@@ -326,6 +326,41 @@ function showLipasNotice() {
   This website does not provide financial, payment, or investment services.
 </footer>
 <script>
+  .qupay-core::before,
+.qupay-core::after {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0,255,200,0.18),
+    rgba(0,255,200,0.08),
+    transparent 70%
+  );
+  animation: haloBreath 6s ease-in-out infinite;
+}
+
+.qupay-core::after {
+  inset: -32%;
+  opacity: 0.6;
+  animation-delay: 3s;
+}
+
+@keyframes haloBreath {
+  0%,100% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+  .qupay-core img {
+  animation:
+    qupayPulse 3.5s ease-in-out infinite,
+    slowRotate 28s linear infinite;
+}
+
+@keyframes slowRotate {
+  from { transform: rotate(0deg) scale(0.95); }
+  to   { transform: rotate(360deg) scale(0.95); }
+}
 const canvas = document.getElementById("qupayCanvas");
 if (canvas) {
   const ctx = canvas.getContext("2d");
@@ -357,8 +392,8 @@ if (canvas) {
 
       const dx = Math.abs(p.x - canvas.width / 2);
       const intensity = Math.max(0.2, 1 - dx / (canvas.width / 2));
-
-      ctx.fillStyle = `rgba(0,255,200,${intensity})`;
+const glow = Math.min(1, 0.15 + 1 / dist);
+ctx.fillStyle = `rgba(0,255,220,${glow})`;
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size * intensity, 0, Math.PI * 2);
       ctx.fill();
