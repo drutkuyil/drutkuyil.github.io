@@ -6,14 +6,51 @@
 <title>QUNET – Quantum Network Research Initiative</title>
 
 <style>
+    .notice-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #0b1320;
+  color: #ffffff;
+  padding: 24px 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 40px rgba(0,200,255,0.25);
+  text-align: center;
+  z-index: 9999;
+}
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     background-color: #050b16;
     color: #e6f1ff;
     line-height: 1.75;
-}
+    <script>
+function showLipasNotice() {
+  const notice = document.getElementById("lipasNotice");
+  notice.style.display = "block";
 
+  setTimeout(() => {
+    notice.style.display = "none";
+    window.open(
+      "https://drutkuyil.github.io/whitepaper/QUNET_Technical_Research_References.pdf",
+      "_blank"
+    );
+  }, 2000);
+}
+</script>
+}
+<div id="lipasNotice" class="notice-box">
+  <h3>Notice</h3>
+  <p>
+    This document is provided for technical and research transparency only.<br>
+    It does not constitute a commercial, medical, or financial offer.
+  </p>
+  <p style="font-size:12px; opacity:0.7;">
+    Download will start automatically.
+  </p>
+</div>
 header {
     text-align: center;
     padding: 120px 20px;
@@ -201,6 +238,9 @@ footer {
         QUNET documentation is provided for transparency and
         research-oriented review. All documents are informational
         and non-binding.
+        <button class="doc-btn" onclick="showLipasNotice()">
+  🔐 View LIPAS Security Research (PDF)
+</button>
     </p>
 
     <div style="margin-top:40px; text-align:center;">
