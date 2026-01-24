@@ -368,6 +368,63 @@ function animate() {
 
 animate();
 </script>
+  </script>
+
+<script>
+/* QUPAY photon-flow animation */
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("qupayCanvas");
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d");
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize);
+
+  const photons = [];
+  for (let i = 0; i < 60; i++) {
+    photons.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
+      size: Math.random() * 2 + 1
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    photons.forEach(p => {
+      const dx = canvas.width / 2 - p.x;
+      const dy = canvas.height / 2 - p.y;
+      const dist = Math.sqrt(dx * dx + dy * dy) + 0.01;
+
+      p.vx += dx / dist * 0.002;
+      p.vy += dy / dist * 0.002;
+
+      p.x += p.vx;
+      p.y += p.vy;
+
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(0,255,200,${0.2 + 1 / dist})`;
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+});
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
