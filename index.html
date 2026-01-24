@@ -92,7 +92,7 @@ section p {
   box-shadow: 0 0 45px rgba(0, 200, 255, 0.18);
 }
 
-/* BUTTON GROUP */
+/* BUTTONS */
 .button-group {
   display: flex;
   flex-direction: column;
@@ -101,7 +101,6 @@ section p {
   margin-top: 45px;
 }
 
-/* BUTTON */
 .button {
   min-width: 260px;
   text-align: center;
@@ -113,6 +112,44 @@ section p {
   font-weight: 600;
   box-shadow: 0 0 22px rgba(0,180,255,0.35);
   cursor: pointer;
+}
+
+/* QUPAY ANIMATION */
+#qupay-animation {
+  text-align: center;
+}
+
+.qupay-stage {
+  position: relative;
+  max-width: 900px;
+  height: 300px;
+  margin: 50px auto 0;
+}
+
+#qupayCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.qupay-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #0cffb6, #063a33);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(0,255,200,0.6);
+}
+
+.qupay-core img {
+  width: 90px;
 }
 
 /* FOOTER */
@@ -143,7 +180,6 @@ function showLipasNotice() {
 
 <body>
 
-<!-- NOTICE -->
 <div id="lipasNotice" class="notice-box">
   <h3>Notice</h3>
   <p>
@@ -155,14 +191,12 @@ function showLipasNotice() {
   </p>
 </div>
 
-<!-- HERO -->
 <header>
   <img src="assets/images/logo_qunet.jpg" alt="QUNET Logo">
   <h1>QUNET</h1>
   <p>Security Beyond Code. Trust Beyond Time.</p>
 </header>
 
-<!-- INTERNET EVOLUTION -->
 <section>
   <h2>The Evolution of Internet Technologies</h2>
   <p>
@@ -176,7 +210,6 @@ function showLipasNotice() {
   </div>
 </section>
 
-<!-- QUANTUM FUTURE -->
 <section>
   <h2>The Future Evolution of the Quantum Internet</h2>
   <p>
@@ -189,7 +222,6 @@ function showLipasNotice() {
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section>
   <h2>How the Quantum Internet Works (Conceptual)</h2>
   <p>
@@ -204,7 +236,6 @@ function showLipasNotice() {
   </div>
 </section>
 
-<!-- SECURITY -->
 <section>
   <h2>Why the Quantum Internet Is Fundamentally Secure</h2>
   <p>
@@ -217,38 +248,36 @@ function showLipasNotice() {
     <img src="assets/images/quantum_vs_classic.jpg" alt="Quantum vs Classical Internet">
   </div>
 </section>
-  <section>
+
+<section>
   <h3>Research Architecture Overview</h3>
-<p>
-QUNET is a research-oriented initiative exploring future communication
-and security paradigms enabled by quantum networking principles.
-Within this conceptual framework, multiple independent research
-directions are investigated to address different layers of trust,
-authorization, and interaction.
-</p>
+  <p>
+    QUNET is a research-oriented initiative exploring future communication
+    and security paradigms enabled by quantum networking principles.
+    Within this conceptual framework, multiple independent research
+    directions are investigated to address different layers of trust,
+    authorization, and interaction.
+  </p>
+  <p>
+    LIPAS (Liveness-based Personalized Authorization System) represents
+    a biologically bound and non-transferable authorization research model,
+    focusing on identity verification, liveness validation, and
+    personalized access control at the human–device boundary.
+  </p>
+  <p>
+    QUP is a separately envisioned research concept positioned at the
+    interaction layer, exploring how authorization signals, verification
+    states, or trust confirmations could conceptually propagate across
+    secure or future quantum-aware infrastructures.
+  </p>
+  <p>
+    These research directions are conceptually related but remain
+    independent in scope. None of the described components constitute
+    an active commercial service, payment system, financial instrument,
+    or transactional infrastructure.
+  </p>
+</section>
 
-<p>
-LIPAS (Liveness-based Personalized Authorization System) represents
-a biologically bound and non-transferable authorization research model,
-focusing on identity verification, liveness validation, and
-personalized access control at the human–device boundary.
-</p>
-
-<p>
-QUP is a separately envisioned research concept positioned at the
-interaction layer, exploring how authorization signals, verification
-states, or trust confirmations could conceptually propagate across
-secure or future quantum-aware infrastructures.
-</p>
-
-<p>
-These research directions are conceptually related but remain
-independent in scope. None of the described components constitute
-an active commercial service, payment system, financial instrument,
-or transactional infrastructure.
-</p>
-  <section>
-  <!-- QUP -->
 <section>
   <h2>QUP – Future Research Concept</h2>
   <p>
@@ -260,7 +289,7 @@ or transactional infrastructure.
     connected to any financial or transactional infrastructure.
   </p>
 </section>
-    <!-- QUPAY ANIMATION PLACEHOLDER -->
+
 <section id="qupay-animation">
   <h3>QUPAY – Conceptual Signal Flow</h3>
   <p>
@@ -276,8 +305,7 @@ or transactional infrastructure.
     </div>
   </div>
 </section>
-    
-<!-- DOCUMENTATION -->
+
 <section>
   <h2>Documentation</h2>
   <p>
@@ -287,29 +315,59 @@ or transactional infrastructure.
   </p>
 
   <div class="button-group">
-    <div class="button" onclick="showLipasNotice()">
-      🔐 View LIPAS Security Research (PDF)
-    </div>
-
-    <a class="button"
-       href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf"
-       target="_blank">
-      📘 Download Whitepaper (PDF)
-    </a>
-
-    <a class="button"
-       href="whitepaper/QUNET_Tokenomics_ERC20_Illustrative_FINAL.pdf"
-       target="_blank">
-      📊 View Tokenomics (PDF)
-    </a>
+    <div class="button" onclick="showLipasNotice()">🔐 View LIPAS Security Research (PDF)</div>
+    <a class="button" href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf" target="_blank">📘 Download Whitepaper (PDF)</a>
+    <a class="button" href="whitepaper/QUNET_Tokenomics_ERC20_Illustrative_FINAL.pdf" target="_blank">📊 View Tokenomics (PDF)</a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 QUNET – Experimental & Informational Project Only<br>
   This website does not provide financial, payment, or investment services.
 </footer>
+
+<script>
+const canvas = document.getElementById("qupayCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+let particles = [];
+for (let i = 0; i < 70; i++) {
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    speed: 0.4 + Math.random(),
+    size: 1 + Math.random() * 2
+  });
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach(p => {
+    p.x += p.speed;
+    if (p.x > canvas.width) p.x = 0;
+
+    const dx = Math.abs(p.x - canvas.width / 2);
+    const intensity = Math.max(0.2, 1 - dx / (canvas.width / 2));
+
+    ctx.fillStyle = `rgba(0,255,200,${intensity})`;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size * intensity, 0, Math.PI * 2);
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
 
 </body>
 </html>
