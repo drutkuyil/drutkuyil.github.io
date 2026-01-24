@@ -20,9 +20,18 @@ header {
   padding: 120px 20px;
   background: radial-gradient(circle at top, #0c1f44, #050b16);
 }
-header img { max-width: 220px; margin-bottom: 30px; }
-header h1 { font-size: 3em; margin: 0; }
-header p { font-size: 1.2em; opacity: 0.85; }
+header img {
+  max-width: 220px;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+header p {
+  font-size: 1.2em;
+  opacity: 0.85;
+}
 
 /* SECTIONS */
 section {
@@ -31,7 +40,10 @@ section {
   padding: 90px 20px;
   text-align: center;
 }
-section h2 { font-size: 2.2em; margin-bottom: 25px; }
+section h2 {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+}
 section p {
   max-width: 900px;
   margin: 15px auto;
@@ -39,7 +51,9 @@ section p {
 }
 
 /* IMAGES */
-.image-block { margin-top: 40px; }
+.image-block {
+  margin-top: 40px;
+}
 .image-block img {
   width: 100%;
   max-width: 1000px;
@@ -47,30 +61,26 @@ section p {
   box-shadow: 0 0 45px rgba(0,200,255,0.18);
 }
 
-/* QUPAY VISUAL */
+/* QUPAY STATIC VISUAL */
 .qupay-stage {
-  position: relative;
   width: 520px;
   height: 520px;
   margin: 70px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#qupayCanvas {
-  position: absolute;
-  inset: 0;
-}
+
 .qupay-core {
-  position: absolute;
-  inset: 0;
-  margin: auto;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background: radial-gradient(
     circle,
     #ffffff 0%,
-    #ffffff 30%,
-    rgba(0,255,200,0.9) 48%,
-    rgba(0,255,200,0.55) 65%,
+    #ffffff 32%,
+    rgba(0,255,200,0.9) 50%,
+    rgba(0,255,200,0.55) 66%,
     rgba(0,255,200,0.25) 80%,
     rgba(0,0,0,0) 100%
   );
@@ -80,21 +90,11 @@ section p {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: corePulse 6s ease-in-out infinite;
 }
+
 .qupay-core img {
   width: 78%;
   filter: drop-shadow(0 0 35px rgba(0,255,200,0.7));
-  animation: logoPulse 4s ease-in-out infinite;
-}
-
-@keyframes corePulse {
-  0%,100% { transform: scale(0.96); }
-  50% { transform: scale(1.04); }
-}
-@keyframes logoPulse {
-  0%,100% { transform: scale(0.97); opacity: 0.95; }
-  50% { transform: scale(1.06); opacity: 1; }
 }
 
 /* BUTTONS */
@@ -121,7 +121,8 @@ section p {
 .notice-box {
   display: none;
   position: fixed;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   background: #0b1320;
   color: #fff;
@@ -129,6 +130,7 @@ section p {
   border-radius: 14px;
   box-shadow: 0 0 40px rgba(0,200,255,0.25);
   z-index: 9999;
+  text-align: center;
 }
 
 /* FOOTER */
@@ -164,34 +166,40 @@ footer {
   <h2>What is QUNET?</h2>
   <p>
     QUNET is a research-oriented initiative exploring the future of secure
-    communication beyond classical networking models. It focuses on
-    conceptual architectures inspired by quantum networking,
+    communication beyond classical networking models.
+    It focuses on conceptual architectures inspired by quantum networking,
     trust propagation, and next-generation security principles.
   </p>
 </section>
 
 <section>
   <h2>Evolution of Internet Technologies</h2>
-  <div class="image-block"><img src="assets/images/internet_evolution.jpg"></div>
+  <div class="image-block">
+    <img src="assets/images/internet_evolution.jpg">
+  </div>
   <p>
     The internet evolved from isolated research networks into a global
-    digital infrastructure—introducing new capabilities alongside
+    digital infrastructure, introducing new capabilities alongside
     increasing trust challenges.
   </p>
 </section>
 
 <section>
   <h2>Future of the Quantum Internet</h2>
-  <div class="image-block"><img src="assets/images/quantum_future.jpg"></div>
+  <div class="image-block">
+    <img src="assets/images/quantum_future.jpg">
+  </div>
   <p>
     Quantum networking concepts rely on physical principles rather than
-    computational assumptions, offering fundamentally new security models.
+    computational assumptions, enabling fundamentally new security models.
   </p>
 </section>
 
 <section>
   <h2>How It Works</h2>
-  <div class="image-block"><img src="assets/images/quantum_how_it_works.jpg"></div>
+  <div class="image-block">
+    <img src="assets/images/quantum_how_it_works.jpg">
+  </div>
   <p>
     Information exchange is supported by entanglement and photon-based
     signaling, reducing reliance on centralized trust authorities.
@@ -200,33 +208,36 @@ footer {
 
 <section>
   <h2>Why It Is Secure</h2>
-  <div class="image-block"><img src="assets/images/quantum_vs_classic.jpg"></div>
+  <div class="image-block">
+    <img src="assets/images/quantum_vs_classic.jpg">
+  </div>
   <p>
-    Unlike classical security, quantum-inspired models make interception
-    inherently detectable due to physical constraints.
+    Quantum-inspired security models rely on physical constraints,
+    making unauthorized interception inherently detectable.
   </p>
 </section>
 
 <section>
   <h2>Research Architecture (QUNET – LIPAS – QUP)</h2>
   <p>
-    QUNET defines the research framework. LIPAS evaluates personalized,
-    liveness-based authorization. QUP explores how verified trust signals
-    propagate across future secure infrastructures.
+    QUNET defines the overarching research framework.
+    LIPAS explores personalized, liveness-based authorization at the identity layer.
+    QUP investigates how verified trust signals could propagate across
+    future secure infrastructures.
   </p>
 </section>
 
 <section>
   <h2>Visual Concept – QUPAY</h2>
   <p>
-    The visualization below illustrates how QUNET requests authorization
-    from LIPAS. If approved, interaction continues via QUPAY.
+    QUPAY is a visual and conceptual illustration of how authorization
+    approval from LIPAS may enable interaction within QUNET.
+    It is not a payment system and does not represent a transactional infrastructure.
   </p>
 
   <div class="qupay-stage">
-    <canvas id="qupayCanvas"></canvas>
     <div class="qupay-core">
-      <img src="assets/images/qupay_logo.png">
+      <img src="assets/images/qupay_logo.png" alt="QUPAY">
     </div>
   </div>
 </section>
@@ -234,19 +245,23 @@ footer {
 <section>
   <h2>Documentation</h2>
   <p>
-    All documents are provided strictly for transparency and research
-    purposes.
+    All documents are provided strictly for transparency and research purposes.
+    They do not represent financial, commercial, or operational commitments.
   </p>
 
   <div class="button-group">
     <div class="button" onclick="showLipasNotice()">🔐 View LIPAS Research (PDF)</div>
-    <a class="button" href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf" target="_blank">📘 QUNET Whitepaper</a>
-    <a class="button" href="whitepaper/QUNET_Tokenomics_ERC20_Illustrative_FINAL.pdf" target="_blank">📊 Tokenomics</a>
+    <a class="button" href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf" target="_blank">
+      📘 QUNET Whitepaper
+    </a>
+    <a class="button" href="whitepaper/QUNET_Tokenomics_ERC20_Illustrative_FINAL.pdf" target="_blank">
+      📊 Tokenomics
+    </a>
   </div>
 </section>
 
 <footer>
-  © 2026 QUNET – Experimental & Informational Project Only
+  © 2026 QUNET TOKEN – Experimental & Informational Project Only
 </footer>
 
 <script>
@@ -255,51 +270,12 @@ function showLipasNotice() {
   n.style.display = "block";
   setTimeout(() => {
     n.style.display = "none";
-    window.open("https://drutkuyil.github.io/whitepaper/QUNET_Technical_Research_References.pdf","_blank");
+    window.open(
+      "https://drutkuyil.github.io/whitepaper/QUNET_Technical_Research_References.pdf",
+      "_blank"
+    );
   }, 3000);
 }
-
-/* PHOTON ORBIT */
-const canvas = document.getElementById("qupayCanvas");
-const ctx = canvas.getContext("2d");
-function resize() {
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-}
-resize();
-window.addEventListener("resize", resize);
-
-const photons = Array.from({length: 90}, () => ({
-  angle: Math.random()*Math.PI*2,
-  radius: 210 + Math.random()*50,
-  speed: 0.001 + Math.random()*0.002,
-  phase: Math.random()*Math.PI*2,
-  size: 1 + Math.random()*2
-}));
-
-function animate() {
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  const cx = canvas.width/2, cy = canvas.height/2;
-
-  photons.forEach(p => {
-    p.angle += p.speed;
-    p.phase += 0.04;
-    const proximity = Math.max(0, 1 - (p.radius-210)/60);
-    const glow = 0.3 + proximity*0.7;
-
-    const x = cx + Math.cos(p.angle)*p.radius;
-    const y = cy + Math.sin(p.angle)*p.radius;
-
-    ctx.beginPath();
-    ctx.fillStyle = `rgba(0,255,200,${glow})`;
-    ctx.shadowBlur = 20*glow;
-    ctx.shadowColor = "rgba(0,255,200,0.9)";
-    ctx.arc(x,y,p.size*(1+proximity),0,Math.PI*2);
-    ctx.fill();
-  });
-  requestAnimationFrame(animate);
-}
-animate();
 </script>
 
 </body>
