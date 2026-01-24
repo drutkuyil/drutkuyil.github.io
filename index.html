@@ -114,7 +114,6 @@ section p {
   cursor: pointer;
 }
 
-/* QUPAY ANIMATION */
 /* QUPAY */
 #qupay-animation {
   text-align: center;
@@ -163,7 +162,6 @@ section p {
   display: flex;
   align-items: center;
   justify-content: center;
-
   animation: coreBreath 6s ease-in-out infinite;
 }
 
@@ -185,7 +183,6 @@ section p {
   50% { transform: scale(1.06); opacity: 1; }
 }
 
-
 /* FOOTER */
 footer {
   padding: 50px 20px;
@@ -195,21 +192,6 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 </style>
-
-<script>
-function showLipasNotice() {
-  const notice = document.getElementById("lipasNotice");
-  notice.style.display = "block";
-
-  setTimeout(() => {
-    notice.style.display = "none";
-    window.open(
-      "https://drutkuyil.github.io/whitepaper/QUNET_Technical_Research_References.pdf",
-      "_blank"
-    );
-  }, 2000);
-}
-</script>
 </head>
 
 <body>
@@ -233,104 +215,33 @@ function showLipasNotice() {
 
 <section>
   <h2>The Evolution of Internet Technologies</h2>
-  <p>
-    The internet has evolved from early research networks into a
-    global infrastructure supporting cloud computing, artificial
-    intelligence, and connected systems. QUNET explores the
-    next conceptual stage of this evolution: quantum networking.
-  </p>
+  <p>QUNET explores the conceptual evolution from classical networks toward quantum-aware infrastructures.</p>
   <div class="image-block">
-    <img src="assets/images/internet_evolution.jpg" alt="Evolution of Internet">
+    <img src="assets/images/internet_evolution.jpg">
   </div>
 </section>
 
 <section>
   <h2>The Future Evolution of the Quantum Internet</h2>
-  <p>
-    Quantum networks are expected to expand from experimental
-    environments into global infrastructures supported by
-    quantum repeaters, fiber networks, and satellite-based links.
-  </p>
+  <p>Quantum communication relies on physical principles rather than computational assumptions.</p>
   <div class="image-block">
-    <img src="assets/images/quantum_future.jpg" alt="Future Quantum Internet">
+    <img src="assets/images/quantum_future.jpg">
   </div>
 </section>
 
 <section>
-  <h2>How the Quantum Internet Works (Conceptual)</h2>
-  <p>
-    In a conceptual quantum internet, fixed locations such as homes
-    and research centers, as well as mobile platforms like vehicles,
-    are equipped with photon transmitters and receivers.
-    Entangled photons distributed via fiber and quantum satellites
-    enable fundamentally secure communication.
-  </p>
-  <div class="image-block">
-    <img src="assets/images/quantum_how_it_works.jpg" alt="How Quantum Internet Works">
-  </div>
-</section>
-
-<section>
-  <h2>Why the Quantum Internet Is Fundamentally Secure</h2>
-  <p>
-    Classical networks rely on mathematical complexity for security.
-    Quantum communication relies on the laws of physics.
-    Any attempt to intercept or measure quantum information
-    inevitably alters its state and becomes detectable.
-  </p>
-  <div class="image-block">
-    <img src="assets/images/quantum_vs_classic.jpg" alt="Quantum vs Classical Internet">
-  </div>
-</section>
-
-<section>
-  <h3>Research Architecture Overview</h3>
-  <p>
-    QUNET is a research-oriented initiative exploring future communication
-    and security paradigms enabled by quantum networking principles.
-    Within this conceptual framework, multiple independent research
-    directions are investigated to address different layers of trust,
-    authorization, and interaction.
-  </p>
-  <p>
-    LIPAS (Liveness-based Personalized Authorization System) represents
-    a biologically bound and non-transferable authorization research model,
-    focusing on identity verification, liveness validation, and
-    personalized access control at the human–device boundary.
-  </p>
-  <p>
-    QUP is a separately envisioned research concept positioned at the
-    interaction layer, exploring how authorization signals, verification
-    states, or trust confirmations could conceptually propagate across
-    secure or future quantum-aware infrastructures.
-  </p>
-  <p>
-    These research directions are conceptually related but remain
-    independent in scope. None of the described components constitute
-    an active commercial service, payment system, financial instrument,
-    or transactional infrastructure.
-  </p>
+  <h2>Research Architecture Overview</h2>
+  <p>LIPAS focuses on biologically bound authorization, while QUP explores future interaction signaling concepts.</p>
 </section>
 
 <section>
   <h2>QUP – Future Research Concept</h2>
-  <p>
-    QUP is a separately envisioned research concept that may
-    explore secure communication or protocol-level interaction
-    models in the future.
-    <br><br>
-    QUP is not an active payment system and is not currently
-    connected to any financial or transactional infrastructure.
-  </p>
+  <p>QUP is a conceptual research layer and is not an active payment or financial system.</p>
 </section>
 
 <section id="qupay-animation">
-  <h3>QUPAY – Conceptual Signal Flow</h3>
-  <p>
-    The following visualization represents a conceptual quantum-inspired
-    interaction flow. It is illustrative only and does not depict an
-    active payment, transaction, or authorization system.
-  </p>
+  <h3>QUPAY – Conceptual Signal Visualization</h3>
+  <p>This visualization is illustrative and non-transactional.</p>
 
   <div class="qupay-stage">
     <canvas id="qupayCanvas"></canvas>
@@ -342,45 +253,16 @@ function showLipasNotice() {
 
 <section>
   <h2>Documentation</h2>
-  <p>
-    QUNET documentation is provided for transparency and
-    research-oriented review. All documents are informational
-    and non-binding.
-  </p>
-
   <div class="button-group">
-    <div class="button" onclick="showLipasNotice()">🔐 View LIPAS Security Research (PDF)</div>
-    <a class="button" href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf" target="_blank">📘 Download Whitepaper (PDF)</a>
-    <a class="button" href="whitepaper/QUNET_Tokenomics_ERC20_Illustrative_FINAL.pdf" target="_blank">📊 View Tokenomics (PDF)</a>
+    <div class="button" onclick="showLipasNotice()">🔐 View LIPAS Research</div>
+    <a class="button" href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf" target="_blank">📘 Whitepaper</a>
+    <a class="button" href="whitepaper/QUNET_Tokenomics_ERC20_Illustrative_FINAL.pdf" target="_blank">📊 Tokenomics</a>
   </div>
 </section>
 
 <footer>
   © 2026 QUNET – Experimental & Informational Project Only<br>
-  This website does not provide financial, payment, or investment services.
-</footer>
-<script>
-  /* QUPAY CORE – LAYERED TRANSITION */
-<!-- QUPAY ANIMATION -->
-<section id="qupay-animation">
-  <h3>QUPAY – Conceptual Signal Flow</h3>
-  <p>
-    The following visualization represents a conceptual quantum-inspired
-    interaction flow. It is illustrative only and does not depict an
-    active payment, transaction, or authorization system.
-  </p>
-
-  <div class="qupay-stage">
-    <canvas id="qupayCanvas"></canvas>
-    <div class="qupay-core">
-      <img src="assets/images/qupay_logo.png" alt="QUPAY">
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 QUNET – Experimental & Informational Project Only<br>
-  This website does not provide financial, payment, or investment services.
+  No financial, payment, or investment services are provided.
 </footer>
 
 <script>
@@ -389,52 +271,46 @@ function showLipasNotice() {
   notice.style.display = "block";
   setTimeout(() => {
     notice.style.display = "none";
-    window.open(
-      "https://drutkuyil.github.io/whitepaper/QUNET_Technical_Research_References.pdf",
-      "_blank"
-    );
+    window.open("https://drutkuyil.github.io/whitepaper/QUNET_Technical_Research_References.pdf","_blank");
   }, 2000);
 }
 
-/* QUPAY PHOTON ORBIT */
+/* PHOTON ORBIT */
 const canvas = document.getElementById("qupayCanvas");
 const ctx = canvas.getContext("2d");
 
-function resizeCanvas() {
+function resize() {
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
 }
-window.addEventListener("resize", resizeCanvas);
-resizeCanvas();
+window.addEventListener("resize", resize);
+resize();
 
-const photons = [];
-for (let i = 0; i < 80; i++) {
-  photons.push({
-    angle: Math.random() * Math.PI * 2,
-    radius: 180 + Math.random() * 60,
-    speed: 0.0015 + Math.random() * 0.002,
-    size: 1.2 + Math.random() * 1.8,
-    phase: Math.random() * Math.PI * 2
-  });
-}
+const photons = Array.from({length: 80}, () => ({
+  angle: Math.random()*Math.PI*2,
+  radius: 180 + Math.random()*60,
+  speed: 0.0015 + Math.random()*0.002,
+  size: 1.2 + Math.random()*1.8,
+  phase: Math.random()*Math.PI*2
+}));
 
 function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  const cx = canvas.width / 2;
-  const cy = canvas.height / 2;
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const cx = canvas.width/2;
+  const cy = canvas.height/2;
 
   photons.forEach(p => {
     p.angle += p.speed;
     p.phase += 0.04;
-    const glow = 0.4 + Math.sin(p.phase) * 0.4;
-    const x = cx + Math.cos(p.angle) * p.radius;
-    const y = cy + Math.sin(p.angle) * p.radius;
+    const glow = 0.4 + Math.sin(p.phase)*0.4;
+    const x = cx + Math.cos(p.angle)*p.radius;
+    const y = cy + Math.sin(p.angle)*p.radius;
 
     ctx.beginPath();
     ctx.fillStyle = `rgba(0,255,200,${glow})`;
     ctx.shadowBlur = 20;
     ctx.shadowColor = "rgba(0,255,200,0.8)";
-    ctx.arc(x, y, p.size, 0, Math.PI * 2);
+    ctx.arc(x,y,p.size,0,Math.PI*2);
     ctx.fill();
   });
 
