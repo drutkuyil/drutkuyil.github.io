@@ -56,18 +56,45 @@ section p {
 }
 .image-block img {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1050px;
   border-radius: 14px;
   box-shadow: 0 0 45px rgba(0,200,255,0.18);
 }
 
-/* DIAGRAM CAPTION */
-.diagram-caption {
-  margin-top: 18px;
-  font-size: 0.95em;
-  opacity: 0.75;
-  font-style: italic;
+/* QUPAY STATIC VISUAL */
+.qupay-stage {
+  width: 360px;
+  height: 360px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.qupay-core {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #ffffff 0%,
+    #ffffff 30%,
+    rgba(0,255,200,0.85) 48%,
+    rgba(0,255,200,0.45) 65%,
+    rgba(0,255,200,0.22) 80%,
+    rgba(0,0,0,0) 100%
+  );
+  box-shadow:
+    0 0 40px rgba(0,255,200,0.28),
+    0 0 90px rgba(0,255,200,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qupay-core img {
+  width: 62%;
+  filter: drop-shadow(0 0 28px rgba(0,255,200,0.6));
+}
+
 /* BUTTONS */
 .button-group {
   display: flex;
@@ -190,23 +217,18 @@ footer {
 
 <section>
   <h2>Research Architecture (QUNET – LIPAS – QUP)</h2>
-  <p>
-    QUNET defines the overarching research framework.
-    LIPAS explores personalized, liveness-based authorization at the identity layer.
-    QUP investigates how verified trust signals could propagate across
-    future secure infrastructures.
-  </p>
 
   <div class="image-block">
-    <img
-      src="assets/images/qunet_lipas_qupay_architecture.webp"
-      alt="QUNET–LIPAS–QUP Conceptual Authorization Architecture"
-      loading="lazy"
-    >
-    <div class="diagram-caption">
-      Conceptual authorization and failure-flow overview across QUNET, LIPAS, and QUP layers.
-    </div>
+    <img src="assets/images/qunet_lipas_qupay_architecture.webp"
+         alt="QUNET LIPAS QUPAY Authorization Architecture">
   </div>
+
+  <p style="font-size:0.95em; opacity:0.75; margin-top:18px;">
+    Conceptual authorization and integrity flow illustrating how QUNET
+    orchestrates interaction through LIPAS-based authorization and
+    QUPAY-dependent participation. No identity data or authorization logic
+    is retained within the network.
+  </p>
 </section>
 
 <section>
@@ -243,7 +265,7 @@ footer {
 </section>
 
 <footer>
-  © 2026 QUNETTOKEN – Experimental & Informational Project Only
+  © 2026 QUNET TOKEN – Experimental & Informational Project Only
 </footer>
 
 <script>
