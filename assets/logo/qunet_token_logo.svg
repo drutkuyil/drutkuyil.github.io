@@ -1,17 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      viewBox="0 0 32 32"
      width="32"
-     height="32">
+     height="32"
+     fill="none">
 
-  <!-- Q body (open on right-bottom side) -->
+  <!-- Outer Q -->
   <path
-    d="M6 10
-       L12 6
-       L22 6
-       L26 12
-       L24 18
-       L18 22
-       L10 20
+    d="M5 10
+       L11 5
+       L21 5
+       L27 11
+       L25 18
+       L19 23
+       L11 21
        L8 16
        L10 12
        L16 10
@@ -21,13 +22,40 @@
        L16 16
        L12 14
        Z"
-    fill="#C3C6CA"/>
+    fill="#C7CBD0"/>
 
-  <!-- Q tail (right-bottom, outward) -->
+  <!-- Outer Q tail -->
   <path
-    d="M18 18
-       L28 26
-       L25 29
+    d="M19 18
+       L30 27
+       L27 30
        L16 20"
-    fill="#9FA4A9"/>
+    fill="#A5A9AE"/>
+
+  <!-- Inner Q -->
+  <path
+    d="M9 12
+       L13 9
+       L19 9
+       L23 13
+       L21 17
+       L17 20
+       L13 18
+       L12 15
+       L14 13
+       L18 14
+       L19 16
+       L17 17
+       L14 16
+       Z"
+    fill="#8E949B"/>
+
+  <!-- Inner Q tail -->
+  <path
+    d="M17 17
+       L24 23
+       L22 25
+       L15 18"
+    fill="#6F767E"/>
+
 </svg>
