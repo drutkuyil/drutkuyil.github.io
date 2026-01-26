@@ -3,34 +3,30 @@
      width="32"
      height="32">
 
-  <!-- Outer futuristic Q -->
+  <!-- Asymmetric futuristic Q body (open on the right-bottom) -->
   <path
-    d="M16 2
+    d="M6 8
+       L14 4
        L24 6
        L28 14
        L24 22
-       L16 26
-       L8 22
-       L4 14
-       L8 6
-       Z
-       M16 6
-       L21 9
-       L23 14
-       L21 19
-       L16 22
-       L11 19
-       L9 14
-       L11 9
+       L14 26
+       L6 20
+       L8 16
+       L16 20
+       L22 18
+       L25 14
+       L22 10
+       L15 8
+       L10 10
        Z"
-    fill="#BFC3C7"
-    fill-rule="evenodd"/>
+    fill="#BFC3C7"/>
 
-  <!-- Q tail -->
+  <!-- Q tail (detached / open) -->
   <path
-    d="M18.5 18.5
-       L26 26
-       L23.5 28.5
-       L16 21"
+    d="M18 18
+       L27 27
+       L24.5 29
+       L16 20"
     fill="#9AA0A6"/>
 </svg>
