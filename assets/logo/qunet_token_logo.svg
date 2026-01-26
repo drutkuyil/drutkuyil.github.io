@@ -3,30 +3,31 @@
      width="32"
      height="32">
 
-  <!-- Asymmetric futuristic Q body (open on the right-bottom) -->
+  <!-- Q body (open on right-bottom side) -->
   <path
-    d="M6 8
-       L14 4
-       L24 6
-       L28 14
-       L24 22
-       L14 26
-       L6 20
+    d="M6 10
+       L12 6
+       L22 6
+       L26 12
+       L24 18
+       L18 22
+       L10 20
        L8 16
-       L16 20
+       L10 12
+       L16 10
+       L22 12
+       L24 16
        L22 18
-       L25 14
-       L22 10
-       L15 8
-       L10 10
+       L16 16
+       L12 14
        Z"
-    fill="#BFC3C7"/>
+    fill="#C3C6CA"/>
 
-  <!-- Q tail (detached / open) -->
+  <!-- Q tail (right-bottom, outward) -->
   <path
     d="M18 18
-       L27 27
-       L24.5 29
+       L28 26
+       L25 29
        L16 20"
-    fill="#9AA0A6"/>
+    fill="#9FA4A9"/>
 </svg>
