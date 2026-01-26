@@ -70,12 +70,6 @@ section p {
   align-items: center;
   justify-content: center;
 }
-.qupay-core {
-  width: auto;
-  height: auto;
-  background: none;
-  box-shadow: none;
-}
 .qupay-core img {
   width: 62%;
   filter: drop-shadow(0 0 28px rgba(0,255,200,0.6));
@@ -119,43 +113,12 @@ section p {
 
 /* FOOTER */
 footer {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
   font-size: 0.9em;
-  opacity: 0.6;
+  opacity: 0.65;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
-  <footer>
-  <div style="margin-bottom:20px;">
-    <p style="margin-bottom:10px; font-size:0.9em; opacity:0.8;">
-      Related Independent Research Initiative
-    </p>
-
-    <a href="https://lipas.tech" target="_blank" rel="noopener">
-      <img
-        src="assets/images/lipas_logo.webp"
-        alt="LIPAS – Liveness-based Personalized Authorization System"
-        style="
-          width:120px;
-          opacity:0.85;
-          transition:opacity 0.3s ease;
-        "
-        onmouseover="this.style.opacity='1'"
-        onmouseout="this.style.opacity='0.85'"
-      >
-    </a>
-
-    <p style="margin-top:12px; font-size:0.75em; opacity:0.6; max-width:520px; margin-left:auto; margin-right:auto;">
-      LIPAS is a patented, independent research project focused on liveness-based
-      authorization concepts. It is not a component of any tokenized,
-      financial, or transactional system.
-    </p>
-  </div>
-
-  <p style="font-size:0.8em; opacity:0.6;">
-    © 2026 QUNET TOKEN – Experimental & Informational Project Only
-  </p>
-</footer>
 </style>
 </head>
 
@@ -190,7 +153,7 @@ footer {
 <section>
   <h2>Evolution of Internet Technologies</h2>
   <div class="image-block">
-    <img src="assets/images/internet_evolution.jpg">
+    <img src="assets/images/internet_evolution.jpg" alt="Evolution of Internet">
   </div>
   <p>
     The internet evolved from isolated research networks into a global
@@ -202,7 +165,7 @@ footer {
 <section>
   <h2>Future of the Quantum Internet</h2>
   <div class="image-block">
-    <img src="assets/images/quantum_future.jpg">
+    <img src="assets/images/quantum_future.jpg" alt="Future Quantum Internet">
   </div>
   <p>
     Quantum networking concepts rely on physical principles rather than
@@ -213,7 +176,7 @@ footer {
 <section>
   <h2>How It Works</h2>
   <div class="image-block">
-    <img src="assets/images/quantum_how_it_works.jpg">
+    <img src="assets/images/quantum_how_it_works.jpg" alt="How Quantum Internet Works">
   </div>
   <p>
     Information exchange is supported by entanglement and photon-based
@@ -224,7 +187,7 @@ footer {
 <section>
   <h2>Why It Is Secure</h2>
   <div class="image-block">
-    <img src="assets/images/quantum_vs_classic.jpg">
+    <img src="assets/images/quantum_vs_classic.jpg" alt="Quantum vs Classical Security">
   </div>
   <p>
     Quantum-inspired security models rely on physical constraints,
@@ -234,12 +197,10 @@ footer {
 
 <section>
   <h2>Research Architecture (QUNET – LIPAS – QUP)</h2>
-
   <div class="image-block">
     <img src="assets/images/qunet_lipas_qupay_architecture.webp"
-         alt="QUNET LIPAS QUPAY Authorization Architecture">
+         alt="QUNET LIPAS QUPAY Architecture Diagram">
   </div>
-
   <p style="font-size:0.95em; opacity:0.75; margin-top:18px;">
     Conceptual authorization and integrity flow illustrating how QUNET
     orchestrates interaction through LIPAS-based authorization and
@@ -255,10 +216,9 @@ footer {
     approval from LIPAS may enable interaction within QUNET.
     It is not a payment system and does not represent a transactional infrastructure.
   </p>
-
   <div class="qupay-stage">
     <div class="qupay-core">
-      <img src="assets/images/qupay_logo.png" alt="QUPAY">
+      <img src="assets/images/qupay_logo.png" alt="QUPAY Logo">
     </div>
   </div>
 </section>
@@ -269,9 +229,8 @@ footer {
     All documents are provided strictly for transparency and research purposes.
     They do not represent financial, commercial, or operational commitments.
   </p>
-
   <div class="button-group">
-    <div class="button" onclick="showLipasNotice()">🔐LIPAS Technical Research (PDF)</div>
+    <div class="button" onclick="showLipasNotice()">🔐 LIPAS Technical Research (PDF)</div>
     <a class="button" href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf" target="_blank">
       📘 QUNET Whitepaper
     </a>
@@ -282,7 +241,25 @@ footer {
 </section>
 
 <footer>
-  © 2026 QUNET TOKEN – Experimental & Informational Project Only
+  <div style="margin-bottom:22px;">
+    <p style="font-size:0.9em; opacity:0.8;">Related Independent Research Initiative</p>
+
+    <a href="https://lipas.tech" target="_blank" rel="noopener">
+      <img src="assets/images/lipas_logo.webp"
+           alt="LIPAS – Liveness-based Personalized Authorization System"
+           style="width:120px; opacity:0.85;">
+    </a>
+
+    <p style="font-size:0.75em; opacity:0.6; max-width:520px; margin:12px auto 0;">
+      LIPAS is a patented, independent research project focused on liveness-based
+      authorization concepts. It is not a component of any tokenized,
+      financial, or transactional system.
+    </p>
+  </div>
+
+  <p style="font-size:0.8em; opacity:0.6;">
+    © 2026 QUNET TOKEN – Experimental & Informational Project Only
+  </p>
 </footer>
 
 <script>
