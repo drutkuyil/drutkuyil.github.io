@@ -1,61 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 32 32"
      width="32"
      height="32"
-     fill="none">
+     viewBox="0 0 32 32">
 
-  <!-- Outer Q -->
-  <path
-    d="M5 10
-       L11 5
-       L21 5
-       L27 11
-       L25 18
-       L19 23
-       L11 21
-       L8 16
-       L10 12
-       L16 10
-       L22 12
-       L24 16
-       L22 18
-       L16 16
-       L12 14
-       Z"
-    fill="#C7CBD0"/>
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="45%" stop-color="#cfcfcf"/>
+      <stop offset="55%" stop-color="#9e9e9e"/>
+      <stop offset="100%" stop-color="#e6e6e6"/>
+    </linearGradient>
+  </defs>
 
-  <!-- Outer Q tail -->
+  <!-- Main Q shape -->
   <path
-    d="M19 18
-       L30 27
-       L27 30
-       L16 20"
-    fill="#A5A9AE"/>
+    d="
+      M16 3
+      L24 7
+      L28 15
+      L25 23
+      L17 27
+      L9 24
+      L5 16
+      L8 8
+      Z
 
-  <!-- Inner Q -->
-  <path
-    d="M9 12
-       L13 9
-       L19 9
-       L23 13
-       L21 17
-       L17 20
-       L13 18
-       L12 15
-       L14 13
-       L18 14
-       L19 16
-       L17 17
-       L14 16
-       Z"
-    fill="#8E949B"/>
+      M10.5 11
+      L14 9.5
+      L20 11
+      L22.5 16
+      L20 21
+      L14 22.5
+      L10.5 20
+      L9 16
+      Z
+    "
+    fill="url(#metal)"
+    fill-rule="evenodd"/>
 
-  <!-- Inner Q tail -->
+  <!-- Q tail -->
   <path
-    d="M17 17
-       L24 23
-       L22 25
-       L15 18"
-    fill="#6F767E"/>
+    d="
+      M17 18
+      L29 29
+      L25.5 30
+      L14.5 20.5
+    "
+    fill="url(#metal)"/>
 
 </svg>
