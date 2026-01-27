@@ -240,26 +240,108 @@ footer {
   </div>
 </section>
 
-<footer>
-  <div style="margin-bottom:22px;">
-    <p style="font-size:0.9em; opacity:0.8;">Related Independent Research Initiative</p>
+<footer
+  style="
+    padding:50px 20px;
+    text-align:center;
+    font-size:0.85em;
+    opacity:0.75;
+    border-top:1px solid rgba(255,255,255,0.1);
+  "
+>
+
+  <!-- LIPAS Cross Reference -->
+  <div style="margin-bottom:26px;">
+    <p style="margin-bottom:10px; font-size:0.85em; opacity:0.8;">
+      Related Independent Research Initiative
+    </p>
 
     <a href="https://lipas.tech" target="_blank" rel="noopener">
-      <img src="assets/images/lipas_logo.webp"
-           alt="LIPAS – Liveness-based Personalized Authorization System"
-           style="width:120px; opacity:0.85;">
+      <img
+        src="assets/images/lipas_logo.webp"
+        alt="LIPAS – Liveness-based Personalized Authorization System"
+        style="
+          width:120px;
+          opacity:0.85;
+          transition:opacity 0.3s ease;
+        "
+        onmouseover="this.style.opacity='1'"
+        onmouseout="this.style.opacity='0.85'"
+      >
     </a>
 
-    <p style="font-size:0.75em; opacity:0.6; max-width:520px; margin:12px auto 0;">
-      LIPAS is a patented, independent research project focused on liveness-based
-      authorization concepts. It is not a component of any tokenized,
-      financial, or transactional system.
+    <p style="
+      margin-top:12px;
+      font-size:0.75em;
+      opacity:0.6;
+      max-width:560px;
+      margin-left:auto;
+      margin-right:auto;
+    ">
+      LIPAS is a patented, independent research project focused on
+      liveness-based authorization concepts.
+      It is not a component of any tokenized, financial,
+      or transactional system.
     </p>
   </div>
 
-  <p style="font-size:0.8em; opacity:0.6;">
-    © 2026 QUNET TOKEN – Experimental & Informational Project Only
+  <!-- QUNET Token Contract -->
+  <div style="
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  ">
+
+    <!-- Token Logo -->
+    <img
+      src="assets/logo/qunet_token_logo.svg"
+      alt="QUNET Token Logo"
+      style="width:40px; opacity:0.85;"
+    />
+
+    <div style="text-align:center;">
+      <div style="margin-bottom:6px;">
+        QUNET Token Contract (Ethereum)
+      </div>
+
+      <!-- Click to copy -->
+      <code
+        onclick="navigator.clipboard.writeText('0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80')"
+        title="Click to copy"
+        style="
+          cursor:pointer;
+          display:inline-block;
+          padding:6px 10px;
+          border-radius:6px;
+          background:rgba(255,255,255,0.05);
+          color:#8fbaff;
+          word-break:break-all;
+          user-select:all;
+        "
+      >
+        0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80
+      </code>
+
+      <div style="margin-top:6px;">
+        <a
+          href="https://etherscan.io/address/0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80"
+          target="_blank"
+          rel="noopener"
+          style="color:#6fa8ff; text-decoration:none;"
+        >
+          View on Etherscan
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal -->
+  <p style="margin-top:30px; font-size:0.75em; opacity:0.6;">
+    © 2026 QUNET TOKEN — Experimental & Informational Research Project Only
   </p>
+
 </footer>
 
 <script>
