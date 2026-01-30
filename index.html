@@ -119,6 +119,51 @@ footer {
   opacity: 0.65;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
+  /* QUNET SECTION ACCENT LINES */
+.qunet-section {
+  position: relative;
+  padding: 0 28px;
+  margin-bottom: 72px;
+}
+
+/* SOL ANA ÇİZGİ */
+.qunet-section::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 2px;
+  height: calc(100% - 10px);
+  background: linear-gradient(
+    to bottom,
+    rgba(0,160,255,0.95),
+    rgba(0,160,255,0.25)
+  );
+  border-radius: 2px;
+}
+
+/* SAĞ SİMETRİ ÇİZGİSİ */
+.qunet-section::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 1px;
+  height: calc(100% - 26px);
+  background: linear-gradient(
+    to bottom,
+    rgba(0,160,255,0.35),
+    rgba(0,160,255,0.05)
+  );
+  border-radius: 1px;
+}
+
+/* MOBİLDE SAĞ ÇİZGİ KAPALI */
+@media (max-width: 768px) {
+  .qunet-section::after {
+    display: none;
+  }
+}
 </style>
 </head>
 
@@ -140,7 +185,7 @@ footer {
   <p>Security Beyond Code. Trust Beyond Time.</p>
 </header>
 
-<section>
+<section class="qunet-section">
   <h2>What is QUNET?</h2>
   <p>
     QUNET is a research-oriented initiative exploring the future of secure
@@ -150,7 +195,7 @@ footer {
   </p>
 </section>
 
-<section>
+<section class="qunet-section">
   <h2>Evolution of Internet Technologies</h2>
   <div class="image-block">
     <img src="assets/images/internet_evolution.jpg" alt="Evolution of Internet">
@@ -162,7 +207,7 @@ footer {
   </p>
 </section>
 
-<section>
+<section class="qunet-section">
   <h2>Future of the Quantum Internet</h2>
   <div class="image-block">
     <img src="assets/images/quantum_future.jpg" alt="Future Quantum Internet">
@@ -173,7 +218,7 @@ footer {
   </p>
 </section>
 
-<section>
+<section class="qunet-section">
   <h2>How It Works</h2>
   <div class="image-block">
     <img src="assets/images/quantum_how_it_works.jpg" alt="How Quantum Internet Works">
@@ -184,7 +229,7 @@ footer {
   </p>
 </section>
 
-<section>
+<section class="qunet-section">
   <h2>Why It Is Secure</h2>
   <div class="image-block">
     <img src="assets/images/quantum_vs_classic.jpg" alt="Quantum vs Classical Security">
@@ -223,7 +268,7 @@ footer {
     Animated visual identity of the QUNET research framework.<br>
     This animation does not represent a token, asset, or financial instrument.
   </p>
-</section>
+<section class="qunet-section">
   <h2>Research Architecture (QUNET – LIPAS – QUP)</h2>
   <div class="image-block">
     <img src="assets/images/qunet_lipas_qupay_architecture.webp"
@@ -237,7 +282,7 @@ footer {
   </p>
 </section>
 
-<section>
+<section class="qunet-section">
   <h2>Visual Concept – QUPAY</h2>
   <p>
     QUPAY is a visual and conceptual illustration of how authorization
@@ -251,7 +296,7 @@ footer {
   </div>
 </section>
 
-<section>
+<section class="qunet-section">
   <h2>Documentation</h2>
   <p>
     All documents are provided strictly for transparency and research purposes.
