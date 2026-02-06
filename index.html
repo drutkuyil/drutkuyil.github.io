@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QUNET – Secure Authorization & Payment Network</title>
+<title>QUNET Token – Secure Authorization & Payment Network</title>
 
 <style>
 body {
@@ -68,14 +68,6 @@ header p {
   box-shadow: 0 0 20px rgba(0,160,255,0.35);
 }
 
-/* IMAGE */
-.image-block img {
-  width: 100%;
-  max-width: 1050px;
-  border-radius: 14px;
-  box-shadow: 0 0 45px rgba(0,200,255,0.18);
-}
-
 /* GLOW */
 .glow {
   position: relative;
@@ -96,66 +88,98 @@ header p {
   z-index: -1;
 }
 
-/* BUTTON */
-.button-group {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  margin-top: 40px;
-}
-
-.button {
-  min-width: 260px;
-  padding: 16px 28px;
-  border-radius: 10px;
-  background: linear-gradient(135deg,#1e3799,#0a3d62);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 0 22px rgba(0,180,255,0.35);
+/* ===== STAGE SLIDER ===== */
+.stage-slider {
+  position: relative;
+  max-width: 720px;
+  margin: 40px auto 20px;
   cursor: pointer;
 }
 
-/* VIDEO OVERLAY */
+.stage-slider img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 0 55px rgba(0,200,255,0.35);
+}
+
+.stage-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(
+    rgba(5,11,22,0.2),
+    rgba(5,11,22,0.85)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 26px;
+}
+
+.stage-title {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.stage-short {
+  font-size: 0.9em;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+
+.stage-description {
+  max-width: 900px;
+  margin: 22px auto 0;
+  font-size: 0.95em;
+  opacity: 0.85;
+}
+
+/* ===== PROGRESS BAR ===== */
+.stage-progress {
+  max-width: 720px;
+  margin: 18px auto 0;
+  display: flex;
+  gap: 8px;
+}
+
+.stage-step {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 6px;
+}
+
+.stage-step.active {
+  background: linear-gradient(
+    90deg,
+    rgba(0,180,255,0.9),
+    rgba(0,255,200,0.9)
+  );
+  box-shadow: 0 0 12px rgba(0,200,255,0.6);
+}
+
+/* VIDEO */
 .video-wrapper {
   position: relative;
   max-width: 420px;
   margin: 40px auto 0;
   cursor: pointer;
 }
+
 .video-wrapper video {
   width: 100%;
   border-radius: 18px;
   box-shadow: 0 0 45px rgba(0,200,255,0.35);
 }
+
 .video-overlay {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    rgba(5,11,22,0.55),
-    rgba(5,11,22,0.75)
-  );
+  background: rgba(5,11,22,0.65);
   border-radius: 18px;
-  transition: opacity 0.6s ease;
-}
-.video-overlay.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.overlay-text {
-  font-size: 0.9em;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #9fdcff;
-  padding: 14px 22px;
-  border: 1px solid rgba(120,200,255,0.45);
-  border-radius: 999px;
-  background: rgba(10,40,80,0.45);
-  box-shadow: 0 0 22px rgba(0,180,255,0.25);
 }
 
 /* NOTICE */
@@ -168,6 +192,7 @@ header p {
   align-items: center;
   justify-content: center;
 }
+
 .notice-inner {
   background: #0b1320;
   padding: 28px 34px;
@@ -188,113 +213,42 @@ footer {
 
 <body>
 
-<!-- LIPAS NOTICE -->
-<div id="lipasNotice" class="notice-box">
-  <div class="notice-inner">
-    <h3>External Research Notice</h3>
-    <p>You are about to visit an independent authorization research project (LIPAS).</p>
-    <p style="opacity:0.7;">Redirecting…</p>
-  </div>
-</div>
-
 <header>
-  <img src="assets/images/logo_qunet.jpg" alt="QUNET">
-  <h1>QUNET</h1>
+  <img src="assets/images/logo_qunet.jpg" alt="QUNET Token">
+  <h1>QUNET Token</h1>
   <p>Secure Authorization & Payment Network</p>
 </header>
 
 <div class="divider"></div>
 
 <section>
-  <h2>What is QUNET Token?</h2>
-  <p>
-    QUNET Token is the native digital currency of the QUNET ecosystem.
-    It powers secure authorization, access control, and payment execution
-    across high-security environments.
-  </p>
-</section>
+  <h2>Quantum Internet & Development Stages</h2>
+  <p style="opacity:0.7;">Click for development stages</p>
 
-<div class="divider"></div>
-
-<section>
-  <h2>Quantum Internet & Development Stage</h2>
-  <div class="image-block glow">
-    <img id="quantumSlider" src="assets/images/quantum_future.jpg" alt="Quantum Internet">
-  </div>
-  <p>
-    Quantum Internet research enables physically verifiable security using
-    entanglement-based communication. Experimental networks are already active
-    in academic and governmental environments.
-  </p>
-  <p style="font-size:0.85em;">
-    📄 Reference:
-    <a href="https://www.ox.ac.uk/news/2026-02-03-new-project-aims-build-foundations-quantum-internet"
-       target="_blank" style="color:#6fa8ff;">
-      New project aims to build the foundations of a quantum internet
-   </a><br>
-  <a href="https://qutech.nl/wp-content/uploads/2018/10/Quantum-internet-A-vision.pdf"
-     target="_blank" style="color:#6fa8ff;">
-    Quantum internet: A vision for the road ahead (Science, QuTech)
-  </a>
-</p>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <h2>LIPAS – Authorization Generator</h2>
-  <p>
-    LIPAS generates authorization using liveness detection and
-    physiological signatures. Blue light indicates valid authorization,
-    while red light signals anomaly detection.
-  </p>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <h2>QUP – Authorization Decision Engine</h2>
-  <p>
-    QUP evaluates authorization requests produced by LIPAS and determines
-    whether access, payment, or physical passage is approved or rejected.
-  </p>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <h2>QUPAY – Secure Payment Interface</h2>
-  <div class="video-wrapper glow" onclick="toggleOverlay()">
-    <video autoplay muted loop playsinline>
-      <source src="assets/video/qupay_authorization.mp4" type="video/mp4">
-    </video>
-    <div id="videoOverlay" class="video-overlay">
-      <div class="overlay-text">▶ Click to view authorization flow</div>
+  <div class="stage-slider glow" onclick="nextStage()">
+    <img id="stageImage" src="assets/stages/stage1_lab.jpg" alt="Stage">
+    <div class="stage-overlay">
+      <div class="stage-title" id="stageTitle">
+        Stage 1 — Laboratory Quantum Networks
+      </div>
+      <div class="stage-short" id="stageShort">
+        Controlled quantum experiments in labs
+      </div>
     </div>
   </div>
-  <p>
-    QUPAY executes payments only after successful authorization
-    generated by LIPAS and approved by QUP.
-  </p>
-</section>
 
-<div class="divider"></div>
-
-<section>
-  <h2>Future Vision</h2>
-  <p>
-    QUNET aims to unify physical security, digital payments,
-    and next-generation network trust into a single authorization framework.
-  </p>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <h2>Related Research</h2>
-  <div class="button-group">
-    <div class="button" onclick="showLipasNotice()">🔐 Visit LIPAS Research</div>
+  <div class="stage-progress">
+    <div class="stage-step active"></div>
+    <div class="stage-step"></div>
+    <div class="stage-step"></div>
+    <div class="stage-step"></div>
+    <div class="stage-step"></div>
   </div>
+
+  <p class="stage-description" id="stageDescription">
+    Early quantum networks are developed in laboratory environments using photon sources,
+    detectors, and isolated fiber links.
+  </p>
 </section>
 
 <footer>
@@ -303,52 +257,60 @@ footer {
   <code onclick="navigator.clipboard.writeText('0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80')">
     0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80
   </code>
-  <p>
-    <a href="https://etherscan.io/address/0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80"
-       target="_blank" style="color:#6fa8ff;">
-      View on Etherscan
-    </a>
-  </p>
 </footer>
 
 <script>
-/* Quantum Slider */
-const quantumImages = [
-  "assets/images/quantum_future.jpg",
-  "assets/images/quantum_vs_classic.jpg",
-  "assets/images/quantum_how_it_works.jpg"
-];
-let qIndex = 0;
-setInterval(() => {
-  const img = document.getElementById("quantumSlider");
-  qIndex = (qIndex + 1) % quantumImages.length;
-  img.src = quantumImages[qIndex];
-}, 4000);
-
-/* Video Overlay */
-let overlayStep = 0;
-function toggleOverlay() {
-  const overlay = document.getElementById("videoOverlay");
-  const text = overlay.querySelector(".overlay-text");
-  if (overlayStep === 0) {
-    text.innerText = "Authorization in progress…";
-    overlayStep = 1;
-  } else if (overlayStep === 1) {
-    text.innerText = "Authorization approved";
-    overlayStep = 2;
-  } else {
-    overlay.classList.add("hidden");
+const stages = [
+  {
+    title: "Stage 1 — Laboratory Quantum Networks",
+    short: "Controlled quantum experiments in labs",
+    desc: "Early quantum networks are developed in laboratory environments using photon sources, detectors, and isolated fiber links.",
+    img: "assets/stages/stage1_lab.jpg"
+  },
+  {
+    title: "Stage 2 — Campus & Research Networks",
+    short: "Quantum links across institutions",
+    desc: "Quantum communication expands to campuses and research centers using dedicated fiber infrastructure.",
+    img: "assets/stages/stage2_campus.jpg"
+  },
+  {
+    title: "Stage 3 — Metropolitan Networks",
+    short: "City-scale quantum connectivity",
+    desc: "Trusted quantum nodes enable secure communication across metropolitan areas.",
+    img: "assets/stages/stage3_city.jpg"
+  },
+  {
+    title: "Stage 4 — National & Satellite Networks",
+    short: "Long-distance quantum communication",
+    desc: "Satellite-assisted links connect distant regions and nations.",
+    img: "assets/stages/stage4_national.jpg"
+  },
+  {
+    title: "Stage 5 — Global Quantum Internet",
+    short: "Worldwide quantum-secured connectivity",
+    desc: "A fully operational quantum internet enabling global authentication, authorization, and value exchange.",
+    img: "assets/stages/stage5_global.jpg"
   }
+];
+
+let stageIndex = 0;
+
+function updateProgress() {
+  const steps = document.querySelectorAll(".stage-step");
+  steps.forEach((step, index) => {
+    step.classList.toggle("active", index <= stageIndex);
+  });
 }
 
-/* LIPAS Notice */
-function showLipasNotice() {
-  const n = document.getElementById("lipasNotice");
-  n.style.display = "flex";
-  setTimeout(() => {
-    window.open("https://lipas.tech", "_blank");
-    n.style.display = "none";
-  }, 2500);
+function nextStage() {
+  stageIndex = (stageIndex + 1) % stages.length;
+
+  document.getElementById("stageTitle").innerText = stages[stageIndex].title;
+  document.getElementById("stageShort").innerText = stages[stageIndex].short;
+  document.getElementById("stageDescription").innerText = stages[stageIndex].desc;
+  document.getElementById("stageImage").src = stages[stageIndex].img;
+
+  updateProgress();
 }
 </script>
 
