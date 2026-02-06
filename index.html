@@ -55,7 +55,7 @@ header p {
   opacity: 0.85;
 }
 
-/* ================= DIVIDERS ================= */
+/* ================= DIVIDER ================= */
 .divider {
   width: 120px;
   height: 2px;
@@ -120,15 +120,6 @@ header p {
 }
 
 /* ================= QUPAY ================= */
-.qupay-stage {
-  width: 360px;
-  height: 360px;
-  margin: 50px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .qupay-stage img {
   width: 70%;
   filter: drop-shadow(0 0 28px rgba(0,255,200,0.6));
@@ -144,13 +135,11 @@ video {
 
 /* ================= NOTICE ================= */
 .notice-box {
-  display: none;
+  display: none; /* 🔥 EN KRİTİK SATIR */
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.75);
-  color: #fff;
   z-index: 9999;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -218,32 +207,14 @@ footer {
 
 <section>
   <h2>QUPAY – Secure Payment Interface</h2>
-  <p>
-    QUPAY acts as the execution layer for authorized transactions.
-    Payments are only released after LIPAS authorization is confirmed.
-  </p>
-
   <div class="image-block glow">
     <img src="assets/images/qupay_app_mockup.webp" alt="QUPAY App">
   </div>
-
   <p id="qupayStatus"><strong>Status:</strong> Waiting for authorization</p>
 
   <div class="button-group">
-    <button class="button" onclick="simulate()">Simulate Authorization</button>
+    <div class="button" onclick="simulate()">Simulate Authorization</div>
   </div>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <h2>Network Identity</h2>
-  <video autoplay muted loop playsinline>
-    <source src="assets/video/qunet_identity.webm" type="video/webm">
-  </video>
-  <p style="font-size:0.8em; opacity:0.6;">
-    Visual identity of the active QUNET network.
-  </p>
 </section>
 
 <div class="divider"></div>
@@ -271,10 +242,12 @@ footer {
 
 <script>
 function showLipasNotice() {
-  document.getElementById("lipasNotice").style.display = "flex";
+  const n = document.getElementById("lipasNotice");
+  n.style.display = "flex";
+
   setTimeout(() => {
     window.open("https://lipas.tech", "_blank");
-    document.getElementById("lipasNotice").style.display = "none";
+    n.style.display = "none";
   }, 2500);
 }
 
