@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QUNET – Quantum Network Research Initiative</title>
+<title>QUNET – Secure Authorization & Payment Network</title>
 
 <style>
+/* ================= GLOBAL ================= */
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -14,46 +15,61 @@ body {
   line-height: 1.75;
 }
 
-/* HEADER */
-header {
-  text-align: center;
-  padding: 120px 20px;
-  background: radial-gradient(circle at top, #0c1f44, #050b16);
-}
-header img {
-  max-width: 220px;
-  margin-bottom: 30px;
-}
-header h1 {
-  font-size: 3em;
-  margin: 0;
-}
-header p {
-  font-size: 1.2em;
-  opacity: 0.85;
-}
-
-/* SECTIONS */
 section {
   max-width: 1200px;
   margin: auto;
   padding: 90px 20px;
   text-align: center;
 }
-section h2 {
+
+h2 {
   font-size: 2.2em;
   margin-bottom: 25px;
 }
-section p {
+
+p {
   max-width: 900px;
   margin: 15px auto;
   opacity: 0.9;
 }
 
-/* IMAGES */
-.image-block {
-  margin-top: 40px;
+/* ================= HEADER ================= */
+header {
+  text-align: center;
+  padding: 120px 20px;
+  background: radial-gradient(circle at top, #0c1f44, #050b16);
 }
+
+header img {
+  max-width: 220px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  opacity: 0.85;
+}
+
+/* ================= DIVIDERS ================= */
+.divider {
+  width: 120px;
+  height: 2px;
+  margin: 60px auto;
+  background: linear-gradient(
+    to right,
+    rgba(0,160,255,0),
+    rgba(0,160,255,0.95),
+    rgba(0,160,255,0)
+  );
+  box-shadow: 0 0 20px rgba(0,160,255,0.35);
+}
+
+/* ================= IMAGE ================= */
 .image-block img {
   width: 100%;
   max-width: 1050px;
@@ -61,28 +77,36 @@ section p {
   box-shadow: 0 0 45px rgba(0,200,255,0.18);
 }
 
-/* QUPAY STATIC VISUAL */
-.qupay-stage {
-  width: 360px;
-  height: 360px;
-  margin: 50px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.qupay-core img {
-  width: 62%;
-  filter: drop-shadow(0 0 28px rgba(0,255,200,0.6));
+/* ================= GLOW ================= */
+.glow {
+  position: relative;
 }
 
-/* BUTTONS */
+.glow::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(0,160,255,0),
+    rgba(0,255,200,0.6),
+    rgba(0,160,255,0)
+  );
+  filter: blur(14px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* ================= BUTTON ================= */
 .button-group {
   display: flex;
   flex-direction: column;
+  gap: 20px;
   align-items: center;
-  gap: 22px;
-  margin-top: 45px;
+  margin-top: 40px;
 }
+
 .button {
   min-width: 260px;
   padding: 16px 28px;
@@ -95,364 +119,171 @@ section p {
   cursor: pointer;
 }
 
-/* NOTICE */
+/* ================= QUPAY ================= */
+.qupay-stage {
+  width: 360px;
+  height: 360px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qupay-stage img {
+  width: 70%;
+  filter: drop-shadow(0 0 28px rgba(0,255,200,0.6));
+}
+
+/* ================= VIDEO ================= */
+video {
+  max-width: 260px;
+  width: 100%;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 22px rgba(0,180,255,0.25));
+}
+
+/* ================= NOTICE ================= */
 .notice-box {
   display: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #0b1320;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
   color: #fff;
-  padding: 24px 30px;
-  border-radius: 14px;
-  box-shadow: 0 0 40px rgba(0,200,255,0.25);
   z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notice-inner {
+  background: #0b1320;
+  padding: 28px 34px;
+  border-radius: 14px;
   text-align: center;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
   padding: 60px 20px;
   text-align: center;
-  font-size: 0.9em;
-  opacity: 0.65;
+  font-size: 0.85em;
+  opacity: 0.7;
   border-top: 1px solid rgba(255,255,255,0.1);
-}
-  /* QUNET SECTION ACCENT LINES */
-.qunet-section {
-  position: relative;
-  padding: 0 28px;
-  margin-bottom: 72px;
-}
-
-/* SOL ANA ÇİZGİ */
-.qunet-section::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 2px;
-  height: calc(100% - 10px);
-  background: linear-gradient(
-    to bottom,
-    rgba(0,160,255,0.95),
-    rgba(0,160,255,0.25)
-  );
-  border-radius: 2px;
-}
-
-/* SAĞ SİMETRİ ÇİZGİSİ */
-.qunet-section::after {
-  content: "";
-  position: absolute;
-  top: 18px;
-  right: 0;
-  width: 1px;
-  height: calc(100% - 26px);
-  background: linear-gradient(
-    to bottom,
-    rgba(0,160,255,0.35),
-    rgba(0,160,255,0.05)
-  );
-  border-radius: 1px;
-}
-
-/* MOBİLDE SAĞ ÇİZGİ KAPALI */
-@media (max-width: 768px) {
-  .qunet-section::after {
-    display: none;
-  }
-}
-.qunet-divider {
-  width: 120px;
-  height: 2px;
-  margin: 60px auto;
-  background: linear-gradient(
-    to right,
-    rgba(0,160,255,0),
-    rgba(0,160,255,0.95),
-    rgba(0,160,255,0)
-  );
-  border-radius: 4px;
-  box-shadow:
-    0 0 14px rgba(0,160,255,0.4),
-    0 0 30px rgba(0,160,255,0.18);
-}
-  @media (max-width: 768px) {
-  .lipas-divider {
-    width: 80px;
-    margin: 40px auto;
-  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NOTICE -->
 <div id="lipasNotice" class="notice-box">
-  <h3>Notice</h3>
-  <p>
-    This document relates to a separate research initiative (LIPAS).<br>
-    It is provided for transparency only and does not represent
-    a commercial, medical, or financial system.
-  </p>
-  <p style="font-size:12px; opacity:0.7;">Redirecting…</p>
+  <div class="notice-inner">
+    <h3>External Research Notice</h3>
+    <p>You are about to visit an independent authorization research project (LIPAS).</p>
+    <p style="opacity:0.7;">Redirecting…</p>
+  </div>
 </div>
 
 <header>
-  <img src="assets/images/logo_qunet.jpg" alt="QUNET Logo">
+  <img src="assets/images/logo_qunet.jpg" alt="QUNET">
   <h1>QUNET</h1>
-  <p>Security Beyond Code. Trust Beyond Time.</p>
+  <p>Secure Authorization & Payment Network</p>
 </header>
-  <div class="qunet-divider"></div>
-<section class="qunet-section">
+
+<div class="divider"></div>
+
+<section>
   <h2>What is QUNET?</h2>
   <p>
-    QUNET is a research-oriented initiative exploring the future of secure
-    communication beyond classical networking models.
-    It focuses on conceptual architectures inspired by quantum networking,
-    trust propagation, and next-generation security principles.
+    QUNET is a secure authorization and payment network designed to operate
+    across high-security environments. It coordinates identity validation,
+    authorization decisions, and value transfer through specialized subsystems.
   </p>
 </section>
-  <div class="qunet-divider"></div>
-<section class="qunet-section">
-  <h2>Evolution of Internet Technologies</h2>
-  <div class="image-block">
-    <img src="assets/images/internet_evolution.jpg" alt="Evolution of Internet">
+
+<div class="divider"></div>
+
+<section>
+  <h2>Core Architecture</h2>
+  <div class="image-block glow">
+    <img src="assets/images/qunet_lipas_qupay_architecture.webp" alt="Architecture">
   </div>
   <p>
-    The internet evolved from isolated research networks into a global
-    digital infrastructure, introducing new capabilities alongside
-    increasing trust challenges.
+    QUNET connects authorization (LIPAS), decision evaluation (QUP),
+    and execution interfaces such as QUPAY into a unified secure flow.
   </p>
 </section>
-  <div class="qunet-divider"></div>
-<section class="qunet-section">
-  <h2>Future of the Quantum Internet</h2>
-  <div class="image-block">
-    <img src="assets/images/quantum_future.jpg" alt="Future Quantum Internet">
-  </div>
+
+<div class="divider"></div>
+
+<section>
+  <h2>QUPAY – Secure Payment Interface</h2>
   <p>
-    Quantum networking concepts rely on physical principles rather than
-    computational assumptions, enabling fundamentally new security models.
+    QUPAY acts as the execution layer for authorized transactions.
+    Payments are only released after LIPAS authorization is confirmed.
   </p>
-</section>
-  <div class="qunet-divider"></div>
-<section class="qunet-section">
-  <h2>How It Works</h2>
-  <div class="image-block">
-    <img src="assets/images/quantum_how_it_works.jpg" alt="How Quantum Internet Works">
+
+  <div class="image-block glow">
+    <img src="assets/images/qupay_app_mockup.webp" alt="QUPAY App">
   </div>
-  <p>
-    Information exchange is supported by entanglement and photon-based
-    signaling, reducing reliance on centralized trust authorities.
-  </p>
-</section>
-  <div class="qunet-divider"></div>
-<section class="qunet-section">
-  <h2>Why It Is Secure</h2>
-  <div class="image-block">
-    <img src="assets/images/quantum_vs_classic.jpg" alt="Quantum vs Classical Security">
+
+  <p id="qupayStatus"><strong>Status:</strong> Waiting for authorization</p>
+
+  <div class="button-group">
+    <button class="button" onclick="simulate()">Simulate Authorization</button>
   </div>
-  <p>
-    Quantum-inspired security models rely on physical constraints,
-    making unauthorized interception inherently detectable.
-  </p>
 </section>
-<section style="padding-top:40px; padding-bottom:40px; text-align:center;">
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    style="
-      max-width:260px;
-      width:100%;
-      opacity:0.85;
-      transform: translateY(-6px);
-      filter: drop-shadow(0 0 22px rgba(0,180,255,0.25));
-    ">
+
+<div class="divider"></div>
+
+<section>
+  <h2>Network Identity</h2>
+  <video autoplay muted loop playsinline>
     <source src="assets/video/qunet_identity.webm" type="video/webm">
   </video>
-
-  <p style="
-    margin-top:10px;
-    font-size:0.8em;
-    opacity:0.6;
-    max-width:520px;
-    margin-left:auto;
-    margin-right:auto;
-  ">
-    Animated visual identity of the QUNET research framework.<br>
-    This animation does not represent a token, asset, or financial instrument.
+  <p style="font-size:0.8em; opacity:0.6;">
+    Visual identity of the active QUNET network.
   </p>
 </section>
-  </p>
-    </section>
-  <div class="qunet-divider"></div>
+
+<div class="divider"></div>
+
 <section>
-  <h2>Research Architecture (QUNET – LIPAS – QUP)</h2>
-  <div class="image-block">
-    <img src="assets/images/qunet_lipas_qupay_architecture.webp"
-         alt="QUNET LIPAS QUPAY Architecture Diagram">
-  </div>
-  <p style="font-size:0.95em; opacity:0.75; margin-top:18px;">
-    Conceptual authorization and integrity flow illustrating how QUNET
-    orchestrates interaction through LIPAS-based authorization and
-    QUPAY-dependent participation. No identity data or authorization logic
-    is retained within the network.
-  </p>
-</section>
-  <div class="qunet-divider"></div>
-<section class="qunet-section">
-  <h2>Visual Concept – QUPAY</h2>
-  <p>
-    QUPAY is a visual and conceptual illustration of how authorization
-    approval from LIPAS may enable interaction within QUNET.
-    It is not a payment system and does not represent a transactional infrastructure.
-  </p>
-  <div class="qupay-stage">
-    <div class="qupay-core">
-      <img src="assets/images/qupay_logo.png" alt="QUPAY Logo">
-    </div>
-  </div>
-</section>
-  <div class="qunet-divider"></div>
-<section class="qunet-section">
   <h2>Documentation</h2>
-  <p>
-    All documents are provided strictly for transparency and research purposes.
-    They do not represent financial, commercial, or operational commitments.
-  </p>
   <div class="button-group">
-    <div class="button" onclick="showLipasNotice()">🔐 LIPAS Technical Research (PDF)</div>
-    <a class="button" href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf" target="_blank">
-      📘 QUNET Whitepaper
-    </a>
-    <a class="button"
-   href="whitepaper/QUNET_Tokenomics_Notice_Addendum.pdf"
-   target="_blank">
-   📊 Tokenomics (Informational)
-</a>
+    <a class="button" href="whitepaper/QUNET_Whitepaper_v2_ERC20_FINAL.pdf" target="_blank">📘 Whitepaper</a>
+    <a class="button" href="whitepaper/QUNET_Tokenomics_Notice_Addendum.pdf" target="_blank">📊 Tokenomics</a>
+    <div class="button" onclick="showLipasNotice()">🔐 LIPAS Authorization Research</div>
   </div>
 </section>
 
-<footer
-  style="
-    padding:50px 20px;
-    text-align:center;
-    font-size:0.85em;
-    opacity:0.75;
-    border-top:1px solid rgba(255,255,255,0.1);
-  "
->
-
-  <!-- LIPAS Cross Reference -->
-  <div style="margin-bottom:26px;">
-    <p style="margin-bottom:10px; font-size:0.85em; opacity:0.8;">
-      Related Independent Research Initiative
-    </p>
-
-    <a href="https://lipas.tech" target="_blank" rel="noopener">
-      <img
-        src="assets/images/lipas_logo.webp"
-        alt="LIPAS – Liveness-based Personalized Authorization System"
-        style="
-          width:120px;
-          opacity:0.85;
-          transition:opacity 0.3s ease;
-        "
-        onmouseover="this.style.opacity='1'"
-        onmouseout="this.style.opacity='0.85'"
-      >
-    </a>
-
-    <p style="
-      margin-top:12px;
-      font-size:0.75em;
-      opacity:0.6;
-      max-width:560px;
-      margin-left:auto;
-      margin-right:auto;
-    ">
-      LIPAS is a patented, independent research project focused on
-      liveness-based authorization concepts.
-      It is not a component of any tokenized, financial,
-      or transactional system.
-    </p>
-  </div>
-
-  <!-- QUNET Token Contract -->
-  <div style="
-    margin-top:30px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:10px;
-  ">
-
-    <!-- Token Logo -->
-    <img
-      src="assets/logo/qunet_token_logo.svg"
-      alt="QUNET Token Logo"
-      style="width:40px; opacity:0.85;"
-    />
-
-    <div style="text-align:center;">
-      <div style="margin-bottom:6px;">
-        QUNET Token Contract (Ethereum)
-      </div>
-
-      <!-- Click to copy -->
-      <code
-        onclick="navigator.clipboard.writeText('0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80')"
-        title="Click to copy"
-        style="
-          cursor:pointer;
-          display:inline-block;
-          padding:6px 10px;
-          border-radius:6px;
-          background:rgba(255,255,255,0.05);
-          color:#8fbaff;
-          word-break:break-all;
-          user-select:all;
-        "
-      >
-        0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80
-      </code>
-
-      <div style="margin-top:6px;">
-        <a
-          href="https://etherscan.io/address/0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80"
-          target="_blank"
-          rel="noopener"
-          style="color:#6fa8ff; text-decoration:none;"
-        >
-          View on Etherscan
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Legal -->
-  <p style="margin-top:30px; font-size:0.75em; opacity:0.6;">
-    © 2026 QUNET TOKEN — Experimental & Informational Research Project Only
+<footer>
+  <img src="assets/logo/qunet_token_logo.svg" style="width:40px;">
+  <p>QUNET Token Contract</p>
+  <code onclick="navigator.clipboard.writeText('0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80')">
+    0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80
+  </code>
+  <p>
+    <a href="https://etherscan.io/address/0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80"
+       target="_blank" style="color:#6fa8ff;">View on Etherscan</a>
   </p>
-
 </footer>
 
 <script>
 function showLipasNotice() {
-  const n = document.getElementById("lipasNotice");
-  n.style.display = "block";
+  document.getElementById("lipasNotice").style.display = "flex";
   setTimeout(() => {
-    n.style.display = "none";
-    window.open(
-      "https://drutkuyil.github.io/whitepaper/QUNET_Technical_Research_References.pdf",
-      "_blank"
-    );
-  }, 3000);
+    window.open("https://lipas.tech", "_blank");
+    document.getElementById("lipasNotice").style.display = "none";
+  }, 2500);
+}
+
+function simulate() {
+  const s = document.getElementById("qupayStatus");
+  s.innerHTML = "<strong>Status:</strong> LIPAS Blue Signal Detected";
+  setTimeout(() => {
+    s.innerHTML = "<strong>Status:</strong> Authorization Approved";
+  }, 2500);
 }
 </script>
 
