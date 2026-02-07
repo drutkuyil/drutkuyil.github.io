@@ -236,12 +236,35 @@ footer {
     transform: rotate(360deg);
   }
 }
+.logo-video {
+  width: 260px;
+  max-width: 70vw;
+  margin: 0 auto 30px;
+}
+
+.logo-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 18px rgba(0,200,255,0.45));
+}
 </style>
 </head>
 
 <body>
 
 <header>
+   <div class="logo-video">
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto">
+      <source src="assets/video/QUNET_donen_logo.mp4" type="video/mp4">
+    </video>
+  </div>
+  
   <h1>QUNET Token</h1>
   <p>Secure Authorization & Payment Network</p>
 </header>
