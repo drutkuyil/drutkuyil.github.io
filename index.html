@@ -248,6 +248,55 @@ footer {
   display: block;
   filter: drop-shadow(0 0 18px rgba(0,200,255,0.45));
 }
+/* ===== GO TO MARKET TABLE ===== */
+.market-table-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.market-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(10,20,40,0.45);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 35px rgba(0,180,255,0.15);
+}
+
+.market-table th,
+.market-table td {
+  padding: 16px 18px;
+  text-align: left;
+}
+
+.market-table th {
+  background: rgba(0,160,255,0.15);
+  font-weight: 600;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.market-table td {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.95em;
+  opacity: 0.9;
+}
+
+.market-table tr:hover td {
+  background: rgba(0,160,255,0.06);
+}
+
+.market-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75em;
+  border-radius: 999px;
+  background: rgba(0,160,255,0.2);
+  color: #9fdcff;
+  white-space: nowrap;
+}
 </style>
 </head>
 
@@ -306,7 +355,60 @@ footer {
     Your browser does not support the video tag.
   </video>
 </div>
+<div class="divider"></div>
 
+<section>
+  <h2>Go-to-Market Overview</h2>
+  <p>
+    The QUNET ecosystem is composed of distinct components, each serving
+    a specific role within authorization, decision-making, and execution layers.
+  </p>
+
+  <div class="market-table-wrapper">
+    <table class="market-table">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Role in Ecosystem</th>
+          <th>Market Function</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>QUNET Token</strong></td>
+          <td>Native digital unit of the ecosystem</td>
+          <td>Economic coordination and funding mechanism</td>
+          <td><span class="market-tag">Blockchain Asset</span></td>
+        </tr>
+        <tr>
+          <td><strong>QUNET</strong></td>
+          <td>Secure network architecture framework</td>
+          <td>Defines trust, authorization, and network logic</td>
+          <td><span class="market-tag">Core Network Layer</span></td>
+        </tr>
+        <tr>
+          <td><strong>LIPAS</strong></td>
+          <td>Authorization generation system</td>
+          <td>Produces liveness-based authorization signals</td>
+          <td><span class="market-tag">Authorization Engine</span></td>
+        </tr>
+        <tr>
+          <td><strong>QUP</strong></td>
+          <td>Decision & evaluation engine</td>
+          <td>Validates authorization requests (approve / reject)</td>
+          <td><span class="market-tag">Security Logic</span></td>
+        </tr>
+        <tr>
+          <td><strong>QUPAY</strong></td>
+          <td>Execution & interaction interface</td>
+          <td>Executes payments or actions after authorization</td>
+          <td><span class="market-tag">Execution Layer</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 <p style="font-size:0.85em; opacity:0.75; margin-top:16px;">
   🎥 Full overview of quantum internet development, architecture, and real-world deployment stages.
 </p>
