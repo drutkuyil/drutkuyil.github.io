@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QUNET Token – Secure Authorization & Payment Network</title>
+<title>QUNET Token / Qup / Qupay – Secure Authorization & Payment Network</title>
 
 <style>
 body {
@@ -215,6 +215,26 @@ footer {
   
 #siteLogo.svg-loaded {
   filter: drop-shadow(0 0 14px rgba(0,200,255,0.45));
+}
+/* === SVG LOGO SIZE & CENTER === */
+#siteLogo {
+  width: 260px;          /* BURADAN büyüklüğü ayarlarsın */
+  max-width: 70vw;
+  height: auto;
+}
+  /* === SVG ROTATION === */
+#siteLogo.svg-loaded {
+  animation: qunetSpin 18s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes qunetSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>
 </head>
