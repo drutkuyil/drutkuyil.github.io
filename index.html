@@ -297,6 +297,56 @@ footer {
   color: #9fdcff;
   white-space: nowrap;
 }
+/* ===== ECOSYSTEM ACCORDION ===== */
+.ecosystem-accordion {
+  max-width: 900px;
+  margin: 50px auto 0;
+  text-align: left;
+}
+
+.ecosystem-accordion details {
+  background: linear-gradient(
+    180deg,
+    rgba(12,30,55,0.95),
+    rgba(5,11,22,0.95)
+  );
+  border-radius: 14px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0,160,255,0.15);
+}
+
+.ecosystem-accordion summary {
+  padding: 18px 22px;
+  font-size: 1.05em;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+.ecosystem-accordion summary::after {
+  content: "＋";
+  position: absolute;
+  right: 22px;
+  font-size: 1.2em;
+  opacity: 0.7;
+}
+
+.ecosystem-accordion details[open] summary::after {
+  content: "−";
+}
+
+.ecosystem-accordion .accordion-content {
+  padding: 18px 22px 22px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.ecosystem-accordion p {
+  margin: 10px 0;
+  font-size: 0.95em;
+  opacity: 0.9;
+}
 </style>
 </head>
 
@@ -413,6 +463,91 @@ footer {
     </table>
   </div>
 
+</section>
+<section>
+  <h2>QUNET Ecosystem Overview</h2>
+  <p style="opacity:0.7;">
+    Core components and their roles within the QUNET authorization and execution stack.
+  </p>
+
+  <div class="ecosystem-accordion">
+
+    <!-- QUNET TOKEN -->
+    <details open>
+      <summary>QUNET Token</summary>
+      <div class="accordion-content">
+        <p><strong>Role in the Ecosystem</strong><br>
+        Native digital asset of the QUNET ecosystem</p>
+
+        <p><strong>Market Function</strong><br>
+        Economic coordination, value transfer, and incentive alignment</p>
+
+        <p><strong>Status</strong><br>
+        Blockchain-based digital asset</p>
+      </div>
+    </details>
+
+    <!-- QUNET -->
+    <details>
+      <summary>QUNET Network</summary>
+      <div class="accordion-content">
+        <p><strong>Role in the Ecosystem</strong><br>
+        Secure network and authorization framework</p>
+
+        <p><strong>Market Function</strong><br>
+        Defines trust, authorization logic, and network security</p>
+
+        <p><strong>Status</strong><br>
+        Core protocol layer</p>
+      </div>
+    </details>
+
+    <!-- LIPAS -->
+    <details>
+      <summary>LIPAS</summary>
+      <div class="accordion-content">
+        <p><strong>Role in the Ecosystem</strong><br>
+        Authorization signal generation system</p>
+
+        <p><strong>Market Function</strong><br>
+        Produces liveness-based and biometric authorization signals</p>
+
+        <p><strong>Status</strong><br>
+        Authorization engine</p>
+      </div>
+    </details>
+
+    <!-- QUP -->
+    <details>
+      <summary>QUP</summary>
+      <div class="accordion-content">
+        <p><strong>Role in the Ecosystem</strong><br>
+        Authorization decision and policy engine</p>
+
+        <p><strong>Market Function</strong><br>
+        Validates, approves, or rejects authorization requests</p>
+
+        <p><strong>Status</strong><br>
+        Security logic layer</p>
+      </div>
+    </details>
+
+    <!-- QUPAY -->
+    <details>
+      <summary>QUPAY</summary>
+      <div class="accordion-content">
+        <p><strong>Role in the Ecosystem</strong><br>
+        Execution and interaction interface</p>
+
+        <p><strong>Market Function</strong><br>
+        Executes payments or operations after authorization</p>
+
+        <p><strong>Status</strong><br>
+        Execution layer</p>
+      </div>
+    </details>
+
+  </div>
 </section>
 
 <footer>
