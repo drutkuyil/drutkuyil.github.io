@@ -3,25 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QUNET Token / Qup / Qupay – Secure Authorization & Payment Network</title>
+
+<title>QUNET Token – Secure Authorization & Payment Network</title>
+
 <!-- SEO -->
-<meta name="description" content="QUNET Token is an experimental research project exploring secure authorization, quantum networking concepts, and next-generation trust infrastructure. Not financial advice.">
-<meta name="keywords" content="QUNET Token, quantum internet, authorization network, QUP, QUPAY, LIPAS, secure payments, research project">
+<meta name="description" content="QUNET Token is an experimental research project exploring secure authorization, quantum networking concepts, and next-generation trust infrastructure.">
+<meta name="keywords" content="QUNET Token, quantum internet, authorization network, QUP, QUPAY, LIPAS">
 <meta name="author" content="QUNET Research Initiative">
 <meta name="robots" content="index, follow">
 
-<!-- Open Graph / Facebook / LinkedIn -->
+<!-- Open Graph -->
 <meta property="og:title" content="QUNET Token – Secure Authorization & Payment Network">
-<meta property="og:description" content="An experimental research initiative focused on quantum-inspired secure authorization, decision engines, and execution layers.">
+<meta property="og:description" content="Experimental research initiative focused on authorization-driven execution layers.">
 <meta property="og:image" content="https://www.qunettoken.com/assets/images/logo_qunet.jpg">
 <meta property="og:url" content="https://www.qunettoken.com">
 <meta property="og:type" content="website">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="QUNET Token – Secure Authorization & Payment Network">
-<meta name="twitter:description" content="Research into quantum internet development stages and secure authorization frameworks.">
-<meta name="twitter:image" content="https://www.qunettoken.com/assets/images/logo_qunet.jpg">
 <style>
 body {
   margin: 0;
@@ -56,9 +53,16 @@ header {
   background: radial-gradient(circle at top, #0c1f44, #050b16);
 }
 
-header img {
-  max-width: 220px;
-  margin-bottom: 30px;
+.logo-video {
+  width: 260px;
+  max-width: 70vw;
+  margin: 0 auto 30px;
+}
+
+.logo-video video {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(0,200,255,0.45));
 }
 
 header h1 {
@@ -105,7 +109,7 @@ header p {
   z-index: -1;
 }
 
-/* ===== STAGE SLIDER ===== */
+/* STAGE SLIDER */
 .stage-slider {
   position: relative;
   max-width: 720px;
@@ -151,7 +155,7 @@ header p {
   opacity: 0.85;
 }
 
-/* ===== PROGRESS BAR ===== */
+/* PROGRESS */
 .stage-progress {
   max-width: 720px;
   margin: 18px auto 0;
@@ -172,15 +176,12 @@ header p {
     rgba(0,180,255,0.9),
     rgba(0,255,200,0.9)
   );
-  box-shadow: 0 0 12px rgba(0,200,255,0.6);
 }
 
 /* VIDEO */
 .video-wrapper {
-  position: relative;
-  max-width: 420px;
+  max-width: 520px;
   margin: 40px auto 0;
-  cursor: pointer;
 }
 
 .video-wrapper video {
@@ -189,83 +190,7 @@ header p {
   box-shadow: 0 0 45px rgba(0,200,255,0.35);
 }
 
-.video-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(5,11,22,0.65);
-  border-radius: 18px;
-}
-
-/* NOTICE */
-.notice-box {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  z-index: 9999;
-  align-items: center;
-  justify-content: center;
-}
-
-.notice-inner {
-  background: #0b1320;
-  padding: 28px 34px;
-  border-radius: 14px;
-  text-align: center;
-}
-
-/* FOOTER */
-footer {
-  padding: 60px 20px;
-  text-align: center;
-  font-size: 0.85em;
-  opacity: 0.7;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-/* === HEADER LOGO TRANSITION === */
-#siteLogo {
-  transition: opacity 0.6s ease, filter 0.6s ease;
-}
-  
-#siteLogo.svg-loaded {
-  filter: drop-shadow(0 0 14px rgba(0,200,255,0.45));
-}
-/* === SVG LOGO SIZE & CENTER === */
-#siteLogo {
-  width: 260px;          /* BURADAN büyüklüğü ayarlarsın */
-  max-width: 70vw;
-  height: auto;
-}
-  /* === SVG ROTATION === */
-#siteLogo.svg-loaded {
-  animation: qunetSpin 18s linear infinite;
-  transform-origin: center;
-}
-
-@keyframes qunetSpin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.logo-video {
-  width: 260px;
-  max-width: 70vw;
-  margin: 0 auto 30px;
-}
-
-.logo-video video {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 0 18px rgba(0,200,255,0.45));
-}
-/* ===== GO TO MARKET TABLE ===== */
+/* TABLE */
 .market-table-wrapper {
   max-width: 1000px;
   margin: 0 auto;
@@ -277,8 +202,6 @@ footer {
   border-collapse: collapse;
   background: rgba(10,20,40,0.45);
   border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 0 35px rgba(0,180,255,0.15);
 }
 
 .market-table th,
@@ -289,454 +212,67 @@ footer {
 
 .market-table th {
   background: rgba(0,160,255,0.15);
-  font-weight: 600;
   font-size: 0.9em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .market-table td {
   border-top: 1px solid rgba(255,255,255,0.08);
-  font-size: 0.95em;
-  opacity: 0.9;
-}
-
-.market-table tr:hover td {
-  background: rgba(0,160,255,0.06);
 }
 
 .market-tag {
-  display: inline-block;
   padding: 4px 10px;
   font-size: 0.75em;
   border-radius: 999px;
   background: rgba(0,160,255,0.2);
   color: #9fdcff;
-  white-space: nowrap;
-}
-/* ===== ECOSYSTEM ACCORDION ===== */
-.ecosystem-accordion {
-  max-width: 900px;
-  margin: 50px auto 0;
-  text-align: left;
 }
 
-.ecosystem-accordion details {
-  background: linear-gradient(
-    180deg,
-    rgba(12,30,55,0.95),
-    rgba(5,11,22,0.95)
-  );
-  border-radius: 14px;
-  margin-bottom: 14px;
-  overflow: hidden;
-  box-shadow: 0 0 25px rgba(0,160,255,0.15);
-}
-
-.ecosystem-accordion summary {
-  padding: 18px 22px;
-  font-size: 1.05em;
-  font-weight: 600;
-  cursor: pointer;
-  list-style: none;
-  position: relative;
-}
-
-.ecosystem-accordion summary::after {
-  content: "＋";
-  position: absolute;
-  right: 22px;
-  font-size: 1.2em;
+/* FOOTER */
+footer {
+  padding: 60px 20px;
+  text-align: center;
+  font-size: 0.85em;
   opacity: 0.7;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
-
-.ecosystem-accordion details[open] summary::after {
-  content: "−";
-}
-
-.ecosystem-accordion .accordion-content {
-  padding: 18px 22px 22px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-
-.ecosystem-accordion p {
-  margin: 10px 0;
-  font-size: 0.95em;
-  opacity: 0.9;
-}
-/* ===== ACCORDION TABLE ===== */
-.accordion {
-  max-width: 900px;
-  margin: 40px auto 0;
-  text-align: left;
-}
-
-.accordion details {
-  background: rgba(255,255,255,0.04);
-  border-radius: 12px;
-  margin-bottom: 12px;
-  padding: 18px 22px;
-  cursor: pointer;
-}
-
-.accordion summary {
-  font-size: 1.1em;
-  font-weight: 600;
-  list-style: none;
-  position: relative;
-}
-
-.accordion summary::after {
-  content: "+";
-  position: absolute;
-  right: 0;
-  font-size: 1.4em;
-  opacity: 0.6;
-}
-
-.accordion details[open] summary::after {
-  content: "–";
-}
-
-.accordion p {
-  margin-top: 14px;
-  font-size: 0.95em;
-  opacity: 0.85;
-}  
 </style>
 </head>
 
 <body>
 
 <header>
-   <div class="logo-video">
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto">
+  <div class="logo-video">
+    <video autoplay muted loop playsinline>
       <source src="assets/video/QUNET_donen_logo.mp4" type="video/mp4">
     </video>
   </div>
-  
   <h1>QUNET Token</h1>
   <p>Secure Authorization & Payment Network</p>
 </header>
+
+<div class="divider"></div>
+
 <section>
   <h2>What is QUNET Token?</h2>
-
   <p>
     QUNET Token is the coordination and execution layer of the QUNET ecosystem.
     It enables secure authorization flows between identity verification,
     decision engines, and execution interfaces.
   </p>
-
-  <p>
-    Unlike traditional payment tokens, QUNET Token is designed to operate
-    within high-security environments where access rights, execution permissions,
-    and authorization integrity are critical.
-  </p>
-
-  <p>
-    QUNET Token does not store identity data. Instead, it interacts with
-    external authorization systems to enable trusted actions only
-    after verification is completed.
-  </p>
 </section>
 
 <div class="divider"></div>
-  <section>
-  <h2>Roadmap & Token Utility</h2>
-
-  <p>
-    QUNET Token is designed as a functional coordination asset that enables
-    authorization-driven execution across the QUNET ecosystem.
-    Its utility evolves alongside the deployment stages of secure
-    quantum-ready network architectures.
-  </p>
-
-  <div style="overflow-x:auto; margin-top:40px;">
-    <table style="
-      width:100%;
-      border-collapse:collapse;
-      min-width:720px;
-      background:rgba(255,255,255,0.02);
-      border-radius:14px;
-      box-shadow:0 0 30px rgba(0,180,255,0.15);
-    ">
-      <thead>
-        <tr style="background:rgba(0,160,255,0.15);">
-          <th style="padding:14px; text-align:left;">Phase</th>
-          <th style="padding:14px; text-align:left;">Network Focus</th>
-          <th style="padding:14px; text-align:left;">QUNET Token Role</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding:14px;">Phase 1</td>
-          <td style="padding:14px;">Research & Prototype Networks</td>
-          <td style="padding:14px;">
-            Internal authorization signaling and system testing
-          </td>
-        </tr>
-        <tr style="background:rgba(255,255,255,0.03);">
-          <td style="padding:14px;">Phase 2</td>
-          <td style="padding:14px;">Institutional & Campus Networks</td>
-          <td style="padding:14px;">
-            Authorization execution between verified entities
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:14px;">Phase 3</td>
-          <td style="padding:14px;">Metropolitan Secure Networks</td>
-          <td style="padding:14px;">
-            Access control, permission validation, and transaction execution
-          </td>
-        </tr>
-        <tr style="background:rgba(255,255,255,0.03);">
-          <td style="padding:14px;">Phase 4</td>
-          <td style="padding:14px;">National & Satellite Networks</td>
-          <td style="padding:14px;">
-            Cross-network authorization settlement and trust coordination
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:14px;">Phase 5</td>
-          <td style="padding:14px;">Global Quantum Internet</td>
-          <td style="padding:14px;">
-            Global authorization routing, execution finality, and system interoperability
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p style="margin-top:28px; font-size:0.9em; opacity:0.75;">
-    QUNET Token is not designed as a passive asset.
-    Its primary function is to enable and finalize authorized actions
-    within secure network environments.
-  </p>
-</section>
-
-<div class="divider"></div>
-<section>
-  <h2>QUNET System Architecture</h2>
-
-  <p>
-    The QUNET ecosystem is built around a clear separation of roles.
-    Authorization generation, decision evaluation, and execution are handled
-    by independent components to ensure security, transparency, and scalability.
-  </p>
-
-  <!-- SIMPLE ARCHITECTURE DIAGRAM -->
-  <div style="
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:26px;
-    margin-top:50px;
-  ">
-
-    <!-- LIPAS -->
-    <div style="
-      width:260px;
-      padding:26px;
-      border-radius:16px;
-      background:rgba(0,160,255,0.08);
-      box-shadow:0 0 30px rgba(0,160,255,0.25);
-    ">
-      <h3 style="margin-top:0;">LIPAS</h3>
-      <p style="font-size:0.9em; opacity:0.85;">
-        Generates authorization using liveness detection and
-        physiological signatures.
-      </p>
-      <p style="font-size:0.8em; opacity:0.7;">
-        Role: Authorization Source
-      </p>
-    </div>
-
-    <!-- QUP -->
-    <div style="
-      width:260px;
-      padding:26px;
-      border-radius:16px;
-      background:rgba(0,255,200,0.08);
-      box-shadow:0 0 30px rgba(0,255,200,0.25);
-    ">
-      <h3 style="margin-top:0;">QUP</h3>
-      <p style="font-size:0.9em; opacity:0.85;">
-        Evaluates authorization requests and determines
-        approval or rejection.
-      </p>
-      <p style="font-size:0.8em; opacity:0.7;">
-        Role: Decision Engine
-      </p>
-    </div>
-
-    <!-- QUPAY -->
-    <div style="
-      width:260px;
-      padding:26px;
-      border-radius:16px;
-      background:rgba(120,120,255,0.08);
-      box-shadow:0 0 30px rgba(120,120,255,0.25);
-    ">
-      <h3 style="margin-top:0;">QUPAY</h3>
-      <p style="font-size:0.9em; opacity:0.85;">
-        Executes payments or actions after successful
-        authorization and approval.
-      </p>
-      <p style="font-size:0.8em; opacity:0.7;">
-        Role: Execution Interface
-      </p>
-    </div>
-
-  </div>
-
-  <p style="margin-top:36px; font-size:0.9em; opacity:0.75;">
-    QUNET Token is used to finalize and settle authorized actions
-    across this architecture, ensuring that only verified and
-    approved operations can be executed.
-  </p>
-</section>
-
-<div class="divider"></<section>
-  <h2>Tokenomics</h2>
-
-  <p>
-    QUNET Token is designed as a utility-driven digital asset
-    that enables authorization settlement, execution finality,
-    and network-level participation within the QUNET ecosystem.
-  </p>
-
-  <div style="
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:26px;
-    margin-top:50px;
-  ">
-
-    <div style="
-      width:260px;
-      padding:24px;
-      border-radius:16px;
-      background:rgba(0,160,255,0.08);
-      box-shadow:0 0 30px rgba(0,160,255,0.25);
-    ">
-      <h3>Total Supply</h3>
-      <p style="font-size:0.95em;">Fixed Supply</p>
-      <p style="opacity:0.7;">No inflation, no rebasing</p>
-    </div>
-
-    <div style="
-      width:260px;
-      padding:24px;
-      border-radius:16px;
-      background:rgba(0,255,200,0.08);
-      box-shadow:0 0 30px rgba(0,255,200,0.25);
-    ">
-      <h3>Utility</h3>
-      <p style="font-size:0.95em;">
-        Authorization settlement<br>
-        Execution validation<br>
-        Network participation
-      </p>
-    </div>
-
-    <div style="
-      width:260px;
-      padding:24px;
-      border-radius:16px;
-      background:rgba(120,120,255,0.08);
-      box-shadow:0 0 30px rgba(120,120,255,0.25);
-    ">
-      <h3>Network Role</h3>
-      <p style="font-size:0.95em;">
-        Final approval layer<br>
-        Economic security anchor
-      </p>
-    </div>
-
-  </div>
-
-  <p style="margin-top:36px; font-size:0.9em; opacity:0.75;">
-    QUNET Token does not replace authorization mechanisms.
-    Instead, it ensures that only successfully authorized and
-    approved actions can be finalized and executed.
-  </p>
-</section>
-
-<div class="divider"></div>
- <section>
-  <h2>Token Utility & Value Flow</h2>
-
-  <p>
-    QUNET Token is required at the final stage of any authorized operation.
-    After LIPAS generates authorization and QUP validates the decision,
-    QUNET Token is used to settle and finalize the action.
-  </p>
-
-  <p>
-    This design ensures that economic value is only consumed
-    after successful identity validation and security approval.
-  </p>
-
-  <p style="font-size:0.9em; opacity:0.75;">
-    Typical use cases include secure payments, access control,
-    physical security zones, and high-trust digital interactions.
-  </p>
-</section>
-
-<div class="divider"></div>
-<div class="divider"></div>
-
-<section>
-  <h2>Documentation</h2>
-  <p style="opacity:0.75;">
-    Official documents for investors, partners, and enterprise adopters.
-  </p>
-
-  <div class="button-group">
-    <a class="button" href="assets/docs/QUNET_Pitch_Deck.pdf" target="_blank">
-      📊 Pitch Deck
-    </a>
-
-    <a class="button" href="assets/docs/QUNET_Whitepaper.pdf" target="_blank">
-      📘 Whitepaper
-    </a>
-
-    <a class="button" href="assets/docs/QUNET_Tokenomics_and_GTM.pdf" target="_blank">
-      📈 Tokenomics & Go-To-Market
-    </a>
-  </div>
-</section>
-
-    <a class="button"
-       href="whitepaper/QUNET_Legal_Disclaimer.pdf"
-       target="_blank">
-      ⚖️ Legal & Risk Disclosure
-    </a>
-
-  </div>
-</section>
-
-<div class="divider"></div> 
 
 <section>
   <h2>Quantum Internet & Development Stages</h2>
-  <p style="opacity:0.7;">Click for development stages</p>
+  <p style="opacity:0.7;">Click to explore development stages</p>
 
   <div class="stage-slider glow" onclick="nextStage()">
     <img id="stageImage" src="assets/stages/stage1_lab.jpg" alt="Stage">
     <div class="stage-overlay">
-      <div class="stage-title" id="stageTitle">
-        Stage 1 — Laboratory Quantum Networks
-      </div>
-      <div class="stage-short" id="stageShort">
-        Controlled quantum experiments in labs
-      </div>
+      <div class="stage-title" id="stageTitle">Stage 1 — Laboratory Quantum Networks</div>
+      <div class="stage-short" id="stageShort">Controlled quantum experiments in labs</div>
     </div>
   </div>
 
@@ -752,201 +288,58 @@ footer {
     Early quantum networks are developed in laboratory environments using photon sources,
     detectors, and isolated fiber links.
   </p>
-  <div class="video-wrapper glow">
-  <video controls preload="none" poster="assets/video/quantum_overview_poster.jpg">
-    <source src="assets/video/quantum_internet_overview.webm" type="video/webm">
-    <source src="assets/video/quantum_internet_overview.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
+  <div class="video-wrapper">
+    <video controls preload="none" poster="assets/video/quantum_overview_poster.jpg">
+      <source src="assets/video/quantum_internet_overview.webm" type="video/webm">
+      <source src="assets/video/quantum_internet_overview.mp4" type="video/mp4">
+    </video>
+  </div>
 </section>
-<p style="font-size:0.85em; opacity:0.75; margin-top:16px;">
-  🎥 Full overview of quantum internet development, architecture, and real-world deployment stages.
-</p>
-</div>
+
 <div class="divider"></div>
+
 <section>
   <h2>Go-to-Market Overview</h2>
-  <p>
-    The QUNET ecosystem is composed of distinct components, each serving
-    a specific role within authorization, decision-making, and execution layers.
-  </p>
-
   <div class="market-table-wrapper">
     <table class="market-table">
       <thead>
         <tr>
           <th>Component</th>
-          <th>Role in Ecosystem</th>
-          <th>Market Function</th>
+          <th>Role</th>
           <th>Status</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>QUNET Token</strong></td>
-          <td>Native digital unit of the ecosystem</td>
-          <td>Economic coordination and funding mechanism</td>
+          <td>QUNET Token</td>
+          <td>Execution & settlement layer</td>
           <td><span class="market-tag">Blockchain Asset</span></td>
         </tr>
         <tr>
-          <td><strong>QUNET</strong></td>
-          <td>Secure network architecture framework</td>
-          <td>Defines trust, authorization, and network logic</td>
-          <td><span class="market-tag">Core Network Layer</span></td>
+          <td>LIPAS</td>
+          <td>Authorization generation</td>
+          <td><span class="market-tag">Security Engine</span></td>
         </tr>
         <tr>
-          <td><strong>LIPAS</strong></td>
-          <td>Authorization generation system</td>
-          <td>Produces liveness-based authorization signals</td>
-          <td><span class="market-tag">Authorization Engine</span></td>
+          <td>QUP</td>
+          <td>Decision engine</td>
+          <td><span class="market-tag">Policy Logic</span></td>
         </tr>
         <tr>
-          <td><strong>QUP</strong></td>
-          <td>Decision & evaluation engine</td>
-          <td>Validates authorization requests (approve / reject)</td>
-          <td><span class="market-tag">Security Logic</span></td>
-        </tr>
-        <tr>
-          <td><strong>QUPAY</strong></td>
-          <td>Execution & interaction interface</td>
-          <td>Executes payments or actions after authorization</td>
-          <td><span class="market-tag">Execution Layer</span></td>
+          <td>QUPAY</td>
+          <td>Execution interface</td>
+          <td><span class="market-tag">Payment Layer</span></td>
         </tr>
       </tbody>
     </table>
-  </div>
-
-</section>
-<section>
-  <h2>QUNET Ecosystem Overview</h2>
-  <p style="opacity:0.7;">
-    Core components and their roles within the QUNET authorization and execution stack.
-  </p>
-
-  <div class="ecosystem-accordion">
-
-    <!-- QUNET TOKEN -->
-    <details open>
-      <summary>QUNET Token</summary>
-      <div class="accordion-content">
-        <p><strong>Role in the Ecosystem</strong><br>
-        Native digital asset of the QUNET ecosystem</p>
-
-        <p><strong>Market Function</strong><br>
-        Economic coordination, value transfer, and incentive alignment</p>
-
-        <p><strong>Status</strong><br>
-        Blockchain-based digital asset</p>
-      </div>
-    </details>
-
-    <!-- QUNET -->
-    <details>
-      <summary>QUNET Network</summary>
-      <div class="accordion-content">
-        <p><strong>Role in the Ecosystem</strong><br>
-        Secure network and authorization framework</p>
-
-        <p><strong>Market Function</strong><br>
-        Defines trust, authorization logic, and network security</p>
-
-        <p><strong>Status</strong><br>
-        Core protocol layer</p>
-      </div>
-    </details>
-
-    <!-- LIPAS -->
-    <details>
-      <summary>LIPAS</summary>
-      <div class="accordion-content">
-        <p><strong>Role in the Ecosystem</strong><br>
-        Authorization signal generation system</p>
-
-        <p><strong>Market Function</strong><br>
-        Produces liveness-based and biometric authorization signals</p>
-
-        <p><strong>Status</strong><br>
-        Authorization engine</p>
-      </div>
-    </details>
-
-    <!-- QUP -->
-    <details>
-      <summary>QUP</summary>
-      <div class="accordion-content">
-        <p><strong>Role in the Ecosystem</strong><br>
-        Authorization decision and policy engine</p>
-
-        <p><strong>Market Function</strong><br>
-        Validates, approves, or rejects authorization requests</p>
-
-        <p><strong>Status</strong><br>
-        Security logic layer</p>
-      </div>
-    </details>
-
-    <!-- QUPAY -->
-    <details>
-      <summary>QUPAY</summary>
-      <div class="accordion-content">
-        <p><strong>Role in the Ecosystem</strong><br>
-        Execution and interaction interface</p>
-
-        <p><strong>Market Function</strong><br>
-        Executes payments or operations after authorization</p>
-
-        <p><strong>Status</strong><br>
-        Execution layer</p>
-      </div>
-    </details>
-    <section>
-  <h2>Market Positioning</h2>
-
-  <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; min-width:600px;">
-      <thead>
-        <tr style="background:rgba(255,255,255,0.08);">
-          <th style="padding:14px;">Component</th>
-          <th style="padding:14px;">Primary Role</th>
-          <th style="padding:14px;">Market Use Case</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding:14px;">QUNET Token</td>
-          <td style="padding:14px;">Coordination & value layer</td>
-          <td style="padding:14px;">Secure execution rights</td>
-        </tr>
-        <tr>
-          <td style="padding:14px;">LIPAS</td>
-          <td style="padding:14px;">Authorization generation</td>
-          <td style="padding:14px;">Biometric security & access</td>
-        </tr>
-        <tr>
-          <td style="padding:14px;">QUP</td>
-          <td style="padding:14px;">Decision engine</td>
-          <td style="padding:14px;">Policy enforcement</td>
-        </tr>
-        <tr>
-          <td style="padding:14px;">QUPAY</td>
-          <td style="padding:14px;">Execution interface</td>
-          <td style="padding:14px;">Payments & secure actions</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
   </div>
 </section>
 
 <footer>
-  <img src="assets/logo/qunet_token_logo.svg" style="width:40px;">
+  <img src="assets/logo/qunet_token_logo.svg" width="40">
   <p>QUNET Token Contract</p>
-  <code onclick="navigator.clipboard.writeText('0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80')">
-    0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80
-  </code>
+  <code>0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80</code>
 </footer>
 
 <script>
@@ -978,51 +371,24 @@ const stages = [
   {
     title: "Stage 5 — Global Quantum Internet",
     short: "Worldwide quantum-secured connectivity",
-    desc: "A fully operational quantum internet enabling global authentication, authorization, and value exchange.",
+    desc: "A fully operational quantum internet enabling global authorization and execution.",
     img: "assets/stages/stage5_global.jpg"
   }
 ];
 
 let stageIndex = 0;
 
-function updateProgress() {
-  const steps = document.querySelectorAll(".stage-step");
-  steps.forEach((step, index) => {
-    step.classList.toggle("active", index <= stageIndex);
-  });
-}
-
 function nextStage() {
   stageIndex = (stageIndex + 1) % stages.length;
-
   document.getElementById("stageTitle").innerText = stages[stageIndex].title;
   document.getElementById("stageShort").innerText = stages[stageIndex].short;
   document.getElementById("stageDescription").innerText = stages[stageIndex].desc;
   document.getElementById("stageImage").src = stages[stageIndex].img;
 
-  updateProgress();
-}
-</script>
-
-<script>
-  window.addEventListener("load", () => {
-    const logo = document.getElementById("siteLogo");
-    if (!logo) return;
-
-    const svgPath = "assets/logo/qunet_token_logo.svg";
-
-    const img = new Image();
-    img.src = svgPath;
-
-    img.onload = () => {
-      logo.style.opacity = "0";
-      setTimeout(() => {
-        logo.src = svgPath;
-        logo.classList.add("svg-loaded");
-        logo.style.opacity = "1";
-      }, 300);
-    };
+  document.querySelectorAll(".stage-step").forEach((el, i) => {
+    el.classList.toggle("active", i <= stageIndex);
   });
+}
 </script>
 
 </body>
