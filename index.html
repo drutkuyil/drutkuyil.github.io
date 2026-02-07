@@ -520,6 +520,88 @@ footer {
 </section>
 
 <div class="divider"></div>
+<section>
+  <h2>QUNET System Architecture</h2>
+
+  <p>
+    The QUNET ecosystem is built around a clear separation of roles.
+    Authorization generation, decision evaluation, and execution are handled
+    by independent components to ensure security, transparency, and scalability.
+  </p>
+
+  <!-- SIMPLE ARCHITECTURE DIAGRAM -->
+  <div style="
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:26px;
+    margin-top:50px;
+  ">
+
+    <!-- LIPAS -->
+    <div style="
+      width:260px;
+      padding:26px;
+      border-radius:16px;
+      background:rgba(0,160,255,0.08);
+      box-shadow:0 0 30px rgba(0,160,255,0.25);
+    ">
+      <h3 style="margin-top:0;">LIPAS</h3>
+      <p style="font-size:0.9em; opacity:0.85;">
+        Generates authorization using liveness detection and
+        physiological signatures.
+      </p>
+      <p style="font-size:0.8em; opacity:0.7;">
+        Role: Authorization Source
+      </p>
+    </div>
+
+    <!-- QUP -->
+    <div style="
+      width:260px;
+      padding:26px;
+      border-radius:16px;
+      background:rgba(0,255,200,0.08);
+      box-shadow:0 0 30px rgba(0,255,200,0.25);
+    ">
+      <h3 style="margin-top:0;">QUP</h3>
+      <p style="font-size:0.9em; opacity:0.85;">
+        Evaluates authorization requests and determines
+        approval or rejection.
+      </p>
+      <p style="font-size:0.8em; opacity:0.7;">
+        Role: Decision Engine
+      </p>
+    </div>
+
+    <!-- QUPAY -->
+    <div style="
+      width:260px;
+      padding:26px;
+      border-radius:16px;
+      background:rgba(120,120,255,0.08);
+      box-shadow:0 0 30px rgba(120,120,255,0.25);
+    ">
+      <h3 style="margin-top:0;">QUPAY</h3>
+      <p style="font-size:0.9em; opacity:0.85;">
+        Executes payments or actions after successful
+        authorization and approval.
+      </p>
+      <p style="font-size:0.8em; opacity:0.7;">
+        Role: Execution Interface
+      </p>
+    </div>
+
+  </div>
+
+  <p style="margin-top:36px; font-size:0.9em; opacity:0.75;">
+    QUNET Token is used to finalize and settle authorized actions
+    across this architecture, ensuring that only verified and
+    approved operations can be executed.
+  </p>
+</section>
+
+<div class="divider"></div>  
 <div class="divider"></div>
 
 <section>
