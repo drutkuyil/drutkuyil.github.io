@@ -1072,6 +1072,46 @@ function nextStage() {
     };
   });
 </script>
+<audio id="introSound" preload="auto" loop>
+  <source src="assets/audio/intro.mp3" type="audio/mpeg">
+</audio>
+  <script>
+  const introSound = document.getElementById("introSound");
+  introSound.volume = 0.2; // %20 ses
 
+  function enableSound() {
+    introSound.play().catch(() => {});
+    document.removeEventListener("click", enableSound);
+    document.removeEventListener("touchstart", enableSound);
+  }
+
+  document.addEventListener("click", enableSound);
+  document.addEventListener("touchstart", enableSound);
+</script>
+  <button id="soundToggle" style="
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.2);
+  color:#fff;
+  padding:10px 12px;
+  border-radius:50%;
+  backdrop-filter: blur(6px);
+">
+🔊
+</button>
+  <script>
+  const toggle = document.getElementById("soundToggle");
+  toggle.addEventListener("click", () => {
+    if (introSound.paused) {
+      introSound.play();
+      toggle.textContent = "🔊";
+    } else {
+      introSound.pause();
+      toggle.textContent = "🔇";
+    }
+  });
+</script>
 </body>
 </html>
