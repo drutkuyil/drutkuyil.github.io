@@ -403,6 +403,25 @@ footer {
   font-size: 0.95em;
   opacity: 0.85;
 }  
+/* ===== TOKENOMICS CENTER FIX ===== */
+.tokenomics {
+  text-align: center;
+}
+
+.tokenomics p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.tokenomics > div {
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .tokenomics div[style*="display:flex"] {
+    justify-content: center !important;
+  }
+}  
 </style>
 </head>
 
@@ -601,7 +620,7 @@ footer {
   </p>
 </section>
 
-</section>
+<section class="tokenomics">
   <h2>Tokenomics</h2>
 
   <p>
