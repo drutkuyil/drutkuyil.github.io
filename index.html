@@ -3,23 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>QUNET Token – Secure Authorization & Payment Network</title>
+<title>QUNET Token / QUP / QUPAY – Secure Authorization & Payment Network</title>
 
 <!-- SEO -->
-<meta name="description" content="QUNET Token is an experimental research project exploring secure authorization, quantum networking concepts, and next-generation trust infrastructure.">
-<meta name="keywords" content="QUNET Token, quantum internet, authorization network, QUP, QUPAY, LIPAS">
+<meta name="description" content="QUNET Token is an experimental research project exploring secure authorization, quantum networking concepts, and next-generation trust infrastructure. Not financial advice.">
+<meta name="keywords" content="QUNET Token, quantum internet, authorization network, QUP, QUPAY, LIPAS, secure payments, research project">
 <meta name="author" content="QUNET Research Initiative">
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph -->
 <meta property="og:title" content="QUNET Token – Secure Authorization & Payment Network">
-<meta property="og:description" content="Experimental research initiative focused on authorization-driven execution layers.">
+<meta property="og:description" content="An experimental research initiative focused on quantum-inspired secure authorization, decision engines, and execution layers.">
 <meta property="og:image" content="https://www.qunettoken.com/assets/images/logo_qunet.jpg">
 <meta property="og:url" content="https://www.qunettoken.com">
 <meta property="og:type" content="website">
 
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+
 <style>
+/* ===== GLOBAL ===== */
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -35,18 +38,10 @@ section {
   text-align: center;
 }
 
-h2 {
-  font-size: 2.2em;
-  margin-bottom: 25px;
-}
+h2 { font-size: 2.2em; margin-bottom: 25px; }
+p { max-width: 900px; margin: 15px auto; opacity: 0.9; }
 
-p {
-  max-width: 900px;
-  margin: 15px auto;
-  opacity: 0.9;
-}
-
-/* HEADER */
+/* ===== HEADER ===== */
 header {
   text-align: center;
   padding: 120px 20px;
@@ -61,55 +56,22 @@ header {
 
 .logo-video video {
   width: 100%;
-  height: auto;
   filter: drop-shadow(0 0 18px rgba(0,200,255,0.45));
 }
 
-header h1 {
-  font-size: 3em;
-  margin: 0;
-}
+header h1 { font-size: 3em; margin: 0; }
+header p { font-size: 1.2em; opacity: 0.85; }
 
-header p {
-  font-size: 1.2em;
-  opacity: 0.85;
-}
-
-/* DIVIDER */
+/* ===== DIVIDER ===== */
 .divider {
   width: 120px;
   height: 2px;
   margin: 60px auto;
-  background: linear-gradient(
-    to right,
-    rgba(0,160,255,0),
-    rgba(0,160,255,0.95),
-    rgba(0,160,255,0)
-  );
+  background: linear-gradient(to right, rgba(0,160,255,0), rgba(0,160,255,1), rgba(0,160,255,0));
   box-shadow: 0 0 20px rgba(0,160,255,0.35);
 }
 
-/* GLOW */
-.glow {
-  position: relative;
-}
-.glow::after {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: linear-gradient(
-    120deg,
-    rgba(0,160,255,0),
-    rgba(0,255,200,0.6),
-    rgba(0,160,255,0)
-  );
-  filter: blur(14px);
-  opacity: 0.5;
-  z-index: -1;
-}
-
-/* STAGE SLIDER */
+/* ===== STAGE SLIDER ===== */
 .stage-slider {
   position: relative;
   max-width: 720px;
@@ -127,35 +89,16 @@ header p {
   position: absolute;
   inset: 0;
   border-radius: 18px;
-  background: linear-gradient(
-    rgba(5,11,22,0.2),
-    rgba(5,11,22,0.85)
-  );
+  background: linear-gradient(rgba(5,11,22,0.2), rgba(5,11,22,0.85));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 26px;
 }
 
-.stage-title {
-  font-size: 1.3em;
-  font-weight: 600;
-}
+.stage-title { font-size: 1.3em; font-weight: 600; }
+.stage-short { font-size: 0.9em; opacity: 0.85; }
 
-.stage-short {
-  font-size: 0.9em;
-  opacity: 0.85;
-  margin-top: 6px;
-}
-
-.stage-description {
-  max-width: 900px;
-  margin: 22px auto 0;
-  font-size: 0.95em;
-  opacity: 0.85;
-}
-
-/* PROGRESS */
 .stage-progress {
   max-width: 720px;
   margin: 18px auto 0;
@@ -171,16 +114,12 @@ header p {
 }
 
 .stage-step.active {
-  background: linear-gradient(
-    90deg,
-    rgba(0,180,255,0.9),
-    rgba(0,255,200,0.9)
-  );
+  background: linear-gradient(90deg, rgba(0,180,255,0.9), rgba(0,255,200,0.9));
 }
 
-/* VIDEO */
+/* ===== VIDEO ===== */
 .video-wrapper {
-  max-width: 520px;
+  max-width: 420px;
   margin: 40px auto 0;
 }
 
@@ -190,12 +129,8 @@ header p {
   box-shadow: 0 0 45px rgba(0,200,255,0.35);
 }
 
-/* TABLE */
-.market-table-wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-  overflow-x: auto;
-}
+/* ===== TABLE ===== */
+.market-table-wrapper { overflow-x: auto; }
 
 .market-table {
   width: 100%;
@@ -206,29 +141,38 @@ header p {
 
 .market-table th,
 .market-table td {
-  padding: 16px 18px;
+  padding: 16px;
   text-align: left;
 }
 
 .market-table th {
   background: rgba(0,160,255,0.15);
-  font-size: 0.9em;
-  text-transform: uppercase;
 }
 
-.market-table td {
-  border-top: 1px solid rgba(255,255,255,0.08);
+/* ===== ACCORDION ===== */
+.ecosystem-accordion {
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
 }
 
-.market-tag {
-  padding: 4px 10px;
-  font-size: 0.75em;
-  border-radius: 999px;
-  background: rgba(0,160,255,0.2);
-  color: #9fdcff;
+.ecosystem-accordion details {
+  background: rgba(12,30,55,0.95);
+  border-radius: 14px;
+  margin-bottom: 14px;
 }
 
-/* FOOTER */
+.ecosystem-accordion summary {
+  padding: 18px 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ecosystem-accordion .accordion-content {
+  padding: 18px 22px;
+}
+
+/* ===== FOOTER ===== */
 footer {
   padding: 60px 20px;
   text-align: center;
@@ -255,21 +199,19 @@ footer {
 
 <section>
   <h2>What is QUNET Token?</h2>
-  <p>
-    QUNET Token is the coordination and execution layer of the QUNET ecosystem.
-    It enables secure authorization flows between identity verification,
-    decision engines, and execution interfaces.
-  </p>
+  <p>QUNET Token is the coordination and execution layer of the QUNET ecosystem...</p>
+  <p>Unlike traditional payment tokens...</p>
+  <p>QUNET Token does not store identity data...</p>
 </section>
 
 <div class="divider"></div>
 
 <section>
   <h2>Quantum Internet & Development Stages</h2>
-  <p style="opacity:0.7;">Click to explore development stages</p>
+  <p style="opacity:0.7;">Click for development stages</p>
 
-  <div class="stage-slider glow" onclick="nextStage()">
-    <img id="stageImage" src="assets/stages/stage1_lab.jpg" alt="Stage">
+  <div class="stage-slider" onclick="nextStage()">
+    <img id="stageImage" src="assets/stages/stage1_lab.jpg">
     <div class="stage-overlay">
       <div class="stage-title" id="stageTitle">Stage 1 — Laboratory Quantum Networks</div>
       <div class="stage-short" id="stageShort">Controlled quantum experiments in labs</div>
@@ -284,14 +226,12 @@ footer {
     <div class="stage-step"></div>
   </div>
 
-  <p class="stage-description" id="stageDescription">
-    Early quantum networks are developed in laboratory environments using photon sources,
-    detectors, and isolated fiber links.
+  <p id="stageDescription">
+    Early quantum networks are developed in laboratory environments...
   </p>
 
   <div class="video-wrapper">
-    <video controls preload="none" poster="assets/video/quantum_overview_poster.jpg">
-      <source src="assets/video/quantum_internet_overview.webm" type="video/webm">
+    <video controls poster="assets/video/quantum_overview_poster.jpg">
       <source src="assets/video/quantum_internet_overview.mp4" type="video/mp4">
     </video>
   </div>
@@ -307,77 +247,58 @@ footer {
         <tr>
           <th>Component</th>
           <th>Role</th>
+          <th>Market Function</th>
           <th>Status</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>QUNET Token</td>
-          <td>Execution & settlement layer</td>
-          <td><span class="market-tag">Blockchain Asset</span></td>
+          <td>Coordination Asset</td>
+          <td>Economic layer</td>
+          <td>Blockchain Asset</td>
         </tr>
         <tr>
           <td>LIPAS</td>
-          <td>Authorization generation</td>
-          <td><span class="market-tag">Security Engine</span></td>
+          <td>Authorization</td>
+          <td>Identity security</td>
+          <td>Engine</td>
         </tr>
         <tr>
           <td>QUP</td>
-          <td>Decision engine</td>
-          <td><span class="market-tag">Policy Logic</span></td>
+          <td>Decision Engine</td>
+          <td>Policy validation</td>
+          <td>Logic Layer</td>
         </tr>
         <tr>
           <td>QUPAY</td>
-          <td>Execution interface</td>
-          <td><span class="market-tag">Payment Layer</span></td>
+          <td>Execution</td>
+          <td>Payments</td>
+          <td>Interface</td>
         </tr>
       </tbody>
     </table>
   </div>
 </section>
 
+<div class="divider"></div>
+
 <footer>
-  <img src="assets/logo/qunet_token_logo.svg" width="40">
+  <img src="assets/logo/qunet_token_logo.svg" style="width:40px;">
   <p>QUNET Token Contract</p>
   <code>0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80</code>
 </footer>
 
 <script>
 const stages = [
-  {
-    title: "Stage 1 — Laboratory Quantum Networks",
-    short: "Controlled quantum experiments in labs",
-    desc: "Early quantum networks are developed in laboratory environments using photon sources, detectors, and isolated fiber links.",
-    img: "assets/stages/stage1_lab.jpg"
-  },
-  {
-    title: "Stage 2 — Campus & Research Networks",
-    short: "Quantum links across institutions",
-    desc: "Quantum communication expands to campuses and research centers using dedicated fiber infrastructure.",
-    img: "assets/stages/stage2_campus.jpg"
-  },
-  {
-    title: "Stage 3 — Metropolitan Networks",
-    short: "City-scale quantum connectivity",
-    desc: "Trusted quantum nodes enable secure communication across metropolitan areas.",
-    img: "assets/stages/stage3_city.jpg"
-  },
-  {
-    title: "Stage 4 — National & Satellite Networks",
-    short: "Long-distance quantum communication",
-    desc: "Satellite-assisted links connect distant regions and nations.",
-    img: "assets/stages/stage4_national.jpg"
-  },
-  {
-    title: "Stage 5 — Global Quantum Internet",
-    short: "Worldwide quantum-secured connectivity",
-    desc: "A fully operational quantum internet enabling global authorization and execution.",
-    img: "assets/stages/stage5_global.jpg"
-  }
+  {title:"Stage 1 — Laboratory Quantum Networks", short:"Controlled labs", desc:"Early quantum networks...", img:"assets/stages/stage1_lab.jpg"},
+  {title:"Stage 2 — Campus Networks", short:"Institutions", desc:"Campus expansion...", img:"assets/stages/stage2_campus.jpg"},
+  {title:"Stage 3 — Metropolitan Networks", short:"City scale", desc:"Metro quantum nodes...", img:"assets/stages/stage3_city.jpg"},
+  {title:"Stage 4 — National Networks", short:"Long distance", desc:"Satellite links...", img:"assets/stages/stage4_national.jpg"},
+  {title:"Stage 5 — Global Quantum Internet", short:"Worldwide", desc:"Global quantum internet...", img:"assets/stages/stage5_global.jpg"}
 ];
 
 let stageIndex = 0;
-
 function nextStage() {
   stageIndex = (stageIndex + 1) % stages.length;
   document.getElementById("stageTitle").innerText = stages[stageIndex].title;
@@ -385,7 +306,7 @@ function nextStage() {
   document.getElementById("stageDescription").innerText = stages[stageIndex].desc;
   document.getElementById("stageImage").src = stages[stageIndex].img;
 
-  document.querySelectorAll(".stage-step").forEach((el, i) => {
+  document.querySelectorAll(".stage-step").forEach((el,i)=>{
     el.classList.toggle("active", i <= stageIndex);
   });
 }
