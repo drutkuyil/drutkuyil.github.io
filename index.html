@@ -873,9 +873,7 @@ footer {
   </p>
 
   <div class="ecosystem-accordion">
-</div>   <!-- ecosystem-accordion -->
-</section>
-  
+
     <!-- QUNET TOKEN -->
     <details open>
       <summary>QUNET Token</summary>
@@ -950,6 +948,7 @@ footer {
         Execution layer</p>
       </div>
     </details>
+    </div>  
     <section>
   <h2>Market Positioning</h2>
     </div>
@@ -1081,8 +1080,6 @@ function nextStage() {
 
   function enableSound() {
     introSound.play().catch(() => {});
-    document.removeEventListener("click", enableSound);
-    document.removeEventListener("touchstart", enableSound);
   }
 
   document.addEventListener("click", enableSound);
