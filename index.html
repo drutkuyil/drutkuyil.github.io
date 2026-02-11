@@ -1161,5 +1161,78 @@ function nextStage() {
     }
   });
 </script>
+  <div id="redirectModal" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+">
+
+  <div style="
+    background:#0b1320;
+    padding:30px 40px;
+    border-radius:16px;
+    text-align:center;
+    max-width:400px;
+    box-shadow:0 0 40px rgba(0,200,255,0.25);
+  ">
+
+    <h3 style="margin-top:0;">External Website Notice</h3>
+
+    <p style="opacity:0.8;">
+      You are leaving <strong>qunettoken.com</strong><br>
+      and will be redirected to:
+    </p>
+
+    <p style="color:#7fdcff; font-weight:600;">
+      www.lipas.tech
+    </p>
+
+    <div style="margin-top:25px; display:flex; gap:15px; justify-content:center;">
+
+      <button onclick="closeRedirectModal()" style="
+        padding:8px 18px;
+        background:rgba(255,255,255,0.1);
+        border:none;
+        color:white;
+        border-radius:8px;
+        cursor:pointer;
+      ">
+        Cancel
+      </button>
+
+      <button onclick="confirmRedirect()" style="
+        padding:8px 18px;
+        background:linear-gradient(90deg,#00b4ff,#00ffd5);
+        border:none;
+        color:#000;
+        font-weight:600;
+        border-radius:8px;
+        cursor:pointer;
+      ">
+        Continue
+      </button>
+
+    </div>
+
+  </div>
+</div>
+  <script>
+function openRedirectModal() {
+  document.getElementById("redirectModal").style.display = "flex";
+}
+
+function closeRedirectModal() {
+  document.getElementById("redirectModal").style.display = "none";
+}
+
+function confirmRedirect() {
+  window.open("https://www.lipas.tech", "_blank");
+  closeRedirectModal();
+}
+</script>
 </body>
 </html>
