@@ -1011,6 +1011,35 @@ footer {
 </section>
 
 <footer>
+  <div style="margin-bottom:30px; text-align:center;">
+
+  <p style="font-size:0.85em; opacity:0.7; margin-bottom:14px;">
+    ⚠️ You are about to be redirected to an external website.
+  </p>
+
+  <img src="assets/images/lipas_logo.webp" 
+       alt="LIPAS Redirect"
+       style="
+         width:260px;
+         max-width:80%;
+         border-radius:18px;
+         box-shadow:0 0 35px rgba(0,200,255,0.25);
+         cursor:pointer;
+         transition:transform 0.3s ease;
+       "
+       onclick="openRedirectModal()"
+       onmouseover="this.style.transform='scale(1.04)'"
+       onmouseout="this.style.transform='scale(1)'"
+  >
+
+  <p style="margin-top:12px;">
+    <span onclick="openRedirectModal()"
+          style="color:#7fdcff; cursor:pointer; font-size:0.9em;">
+       www.lipas.tech →
+    </span>
+  </p>
+
+</div>
   <img src="assets/logo/qunet_token_logo.svg" style="width:40px;">
   <p>QUNET Token Contract</p>
   <code onclick="navigator.clipboard.writeText('0xdf9e97c9B98b65A8a4e7A04Ab5eA109690E0bf80')">
