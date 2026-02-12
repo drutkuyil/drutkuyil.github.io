@@ -67,6 +67,15 @@ header {
   background: transparent;   /* BURASI DEĞİŞTİ */
   overflow: hidden;
 }
+ header::after {
+  content:"";
+  position:absolute;
+  bottom:-1px;
+  left:0;
+  width:100%;
+  height:120px;
+  background: linear-gradient(to bottom, transparent, #0c1f44);
+} 
 header::before {
   content: "";
   position: absolute;
