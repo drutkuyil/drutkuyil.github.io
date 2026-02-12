@@ -80,10 +80,16 @@ header::after {
   bottom:0;
   left:0;
   width:100%;
-  height:160px;
-  background: linear-gradient(to bottom, transparent, #081630 70%, #050b16);
-  pointer-events:none; 
+  height:120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(8,22,48,0) 0%,
+    rgba(8,22,48,0.6) 60%,
+    #050b16 100%
+  );
+  pointer-events:none;
 } 
+  
 header::before {
   content: "";
   position: absolute;
@@ -94,16 +100,17 @@ header::before {
   animation: heroGlowMove 18s ease-in-out infinite alternate;
   z-index: 0;
   pointer-events: none;
+  will-change: transform;
 }
 
 header > * {
   position: relative;
   z-index: 2;
 }
-
+  
 @keyframes heroGlowMove {
-  from { transform: translate(0,0) scale(1); }
-  to   { transform: translate(-40px,-30px) scale(1.1); }
+  from { transform: translate(0,0); }
+  to   { transform: translate(-30px,-20px); 
 }
 
 header h1 {
