@@ -450,6 +450,53 @@ h2 {
 * {
   box-sizing: border-box;
 }
+/* ===== DOCUMENTATION SECTION ===== */
+
+.documentation-grid {
+  max-width: 1000px;
+  margin: 50px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.doc-card {
+  background: linear-gradient(
+    180deg,
+    rgba(15,30,55,0.95),
+    rgba(8,15,30,0.95)
+  );
+  border-radius: 18px;
+  padding: 28px;
+  text-decoration: none;
+  color: #e6f1ff;
+  transition: all 0.35s ease;
+  box-shadow: 0 0 25px rgba(0,160,255,0.08);
+  border: 1px solid rgba(255,255,255,0.06);
+  display: block;
+}
+
+.doc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px rgba(0,200,255,0.35);
+  border-color: rgba(0,200,255,0.4);
+}
+
+.doc-icon {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.doc-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.doc-desc {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
 </style>
 </head>
 
@@ -797,31 +844,41 @@ h2 {
     physical security zones, and high-trust digital interactions.
   </p>
 </section>
-<div class="divider"></div>
-<section>
-  <h2>Documentation</h2>
-  <p style="opacity:0.75;">
-    Official documents for investors, partners, and enterprise adopters.
-  </p>
+<div class="documentation-grid">
 
-  <div class="button-group">
-    <a class="button" href="pitch-deck/QUNET_Pitch_Deck_v1.0.pdf" target="_blank">
-      📊 Pitch Deck
-    </a>
+  <a class="doc-card" href="pitch-deck/QUNET_Pitch_Deck_v1.0.pdf" target="_blank">
+    <div class="doc-icon">📊</div>
+    <div class="doc-title">Pitch Deck</div>
+    <div class="doc-desc">
+      High-level overview for investors and strategic partners.
+    </div>
+  </a>
 
-    <a class="button" href="whitepaper/QUNET_Whitepaper_v1.0.pdf" target="_blank">
-      📘 Whitepaper
-    </a>
+  <a class="doc-card" href="whitepaper/QUNET_Whitepaper_v1.0.pdf" target="_blank">
+    <div class="doc-icon">📘</div>
+    <div class="doc-title">Whitepaper</div>
+    <div class="doc-desc">
+      Technical framework, architecture, and authorization model.
+    </div>
+  </a>
 
-    <a class="button" href="tokenomics/QUNET_Tokenomics_and_GTM.pdf" target="_blank">
-      📈 Tokenomics & Go-To-Market
-    </a>
-    <a class="button"
-       href="legal/QUNET_Legal_Disclaimer.pdf"
-       target="_blank">
-      ⚖️ Legal & Risk Disclosure
-    </a>
-  </div>
+  <a class="doc-card" href="tokenomics/QUNET_Tokenomics_and_GTM.pdf" target="_blank">
+    <div class="doc-icon">📈</div>
+    <div class="doc-title">Tokenomics & Go-To-Market</div>
+    <div class="doc-desc">
+      Utility structure, allocation strategy, and ecosystem growth.
+    </div>
+  </a>
+
+  <a class="doc-card" href="legal/QUNET_Legal_Disclaimer.pdf" target="_blank">
+    <div class="doc-icon">⚖️</div>
+    <div class="doc-title">Legal & Risk Disclosure</div>
+    <div class="doc-desc">
+      Regulatory considerations and legal framework.
+    </div>
+  </a>
+
+</div>
 </section>
 <div class="divider"></div>
 <section>
