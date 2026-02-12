@@ -515,6 +515,49 @@ footer {
 .btn-secondary:hover {
   background: rgba(255,255,255,0.08);
 }
+/* ===== PREMIUM HERO GLOW ===== */
+
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Moving background layer */
+header::before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  top: -20%;
+  left: -20%;
+  background: radial-gradient(
+      circle at 30% 40%,
+      rgba(0,180,255,0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(0,255,200,0.15),
+      transparent 65%
+    );
+  animation: heroGlowMove 18s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+/* Make hero content stay above glow */
+header > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes heroGlowMove {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  100% {
+    transform: translate(-40px, -30px) scale(1.1);
+  }
+}
 </style>
 </head>
 
