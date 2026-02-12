@@ -428,7 +428,19 @@ footer {
   .tokenomics div[style*="display:flex"] {
     justify-content: center !important;
   }
-}  
+}
+@media (max-width: 768px) {
+  .tokenomics div[style*="display:flex"] {
+    justify-content: center !important;
+  }
+}
+
+/* ================= TABLE SCROLL FIX ================= */
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 </style>
 </head>
 
@@ -446,7 +458,6 @@ footer {
     </video>
   </div>
   
-  <section class="hero">
     <div class="hero-content">
 
       <div class="hero-label">
@@ -503,7 +514,7 @@ footer {
     quantum-ready network architectures.
   </p>
 
-  <div style="overflow-x:auto; margin-top:40px;">
+  <div class="table-scroll" style="margin-top:40px;">
     <table style="
       width:100%;
       border-collapse:collapse;
