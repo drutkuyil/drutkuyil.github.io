@@ -532,18 +532,32 @@ header::before {
   left: -20%;
   background: radial-gradient(
       circle at 30% 40%,
-      rgba(0,180,255,0.18),
+      rgba(0,180,255,0.10),
       transparent 60%
     ),
     radial-gradient(
       circle at 70% 60%,
-      rgba(0,255,200,0.15),
+      rgba(0,255,200,0.08),
       transparent 65%
     );
   animation: heroGlowMove 18s ease-in-out infinite alternate;
   z-index: 0;
 }
-
+.glow::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(0,160,255,0),
+    rgba(0,255,200,0.6),
+    rgba(0,160,255,0)
+  );
+  filter: blur(8px);
+  opacity: 0.18;
+  z-index: -1;
+}
 /* Make hero content stay above glow */
 header > * {
   position: relative;
