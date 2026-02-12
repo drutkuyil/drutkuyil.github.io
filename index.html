@@ -23,6 +23,9 @@
 <meta name="twitter:description" content="Research into quantum internet development stages and secure authorization frameworks.">
 <meta name="twitter:image" content="https://www.qunettoken.com/assets/images/logo_qunet.jpg">
 <style>
+
+/* ================= BASE ================= */
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -49,16 +52,38 @@ p {
   opacity: 0.9;
 }
 
-/* HEADER */
+/* ================= HERO ================= */
+
 header {
+  position: relative;
   text-align: center;
-  padding: 120px 20px;
+  padding: 160px 20px;
   background: radial-gradient(circle at top, #0c1f44, #050b16);
+  overflow: hidden;
 }
 
-header img {
-  max-width: 220px;
-  margin-bottom: 30px;
+header::before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  top: -20%;
+  left: -20%;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(0,180,255,0.10), transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(0,255,200,0.08), transparent 65%);
+  animation: heroGlowMove 18s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+header > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes heroGlowMove {
+  from { transform: translate(0,0) scale(1); }
+  to   { transform: translate(-40px,-30px) scale(1.1); }
 }
 
 header h1 {
@@ -70,7 +95,6 @@ header p {
   font-size: 1.2em;
   opacity: 0.85;
 }
-
 /* DIVIDER */
 .divider {
   width: 120px;
@@ -84,28 +108,8 @@ header p {
   );
   box-shadow: 0 0 20px rgba(0,160,255,0.35);
 }
+/* ================= STAGE SLIDER ================= */
 
-/* GLOW */
-.glow {
-  position: relative;
-}
-.glow::after {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: linear-gradient(
-    120deg,
-    rgba(0,160,255,0),
-    rgba(0,255,200,0.6),
-    rgba(0,160,255,0)
-  );
-  filter: blur(14px);
-  opacity: 0.5;
-  z-index: -1;
-}
-
-/* ===== STAGE SLIDER ===== */
 .stage-slider {
   position: relative;
   max-width: 720px;
@@ -116,7 +120,7 @@ header p {
 .stage-slider img {
   width: 100%;
   border-radius: 18px;
-  box-shadow: 0 0 55px rgba(0,200,255,0.35);
+  box-shadow: 0 0 40px rgba(0,200,255,0.25);
 }
 
 .stage-overlay {
@@ -150,7 +154,6 @@ header p {
   font-size: 0.95em;
   opacity: 0.85;
 }
-
 /* ===== PROGRESS BAR ===== */
 .stage-progress {
   max-width: 720px;
@@ -422,156 +425,6 @@ footer {
     justify-content: center !important;
   }
 }  
-.hero {
-  position: relative;
-  padding: 160px 20px;
-  text-align: center;
-  background: radial-gradient(circle at top, #0c1f44, #050b16);
-  overflow: hidden;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(0,255,200,0.05), transparent 70%);
-  animation: heroGlow 6s ease-in-out infinite alternate;
-}
-
-@keyframes heroGlow {
-  from { opacity: 0.4; }
-  to { opacity: 0.8; }
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  margin: auto;
-}
-
-.hero-label {
-  font-size: 0.85em;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  opacity: 0.6;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: 3em;
-  margin: 0;
-}
-
-.hero h1 span {
-  font-weight: 400;
-  opacity: 0.85;
-}
-
-.hero-tagline {
-  font-size: 1.3em;
-  margin-top: 20px;
-  opacity: 0.85;
-}
-
-.hero-description {
-  margin-top: 25px;
-  font-size: 1em;
-  opacity: 0.75;
-}
-
-.hero-buttons {
-  margin-top: 40px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn-primary,
-.btn-secondary {
-  padding: 14px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 0.95em;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background: linear-gradient(90deg, #00b4ff, #00ffc8);
-  color: #00121f;
-  font-weight: 600;
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(0,255,200,0.4);
-}
-
-.btn-secondary {
-  border: 1px solid rgba(255,255,255,0.3);
-  color: #e6f1ff;
-}
-
-.btn-secondary:hover {
-  background: rgba(255,255,255,0.08);
-}
-/* ===== PREMIUM HERO GLOW ===== */
-
-header {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Moving background layer */
-header::before {
-  content: "";
-  position: absolute;
-  width: 140%;
-  height: 140%;
-  top: -20%;
-  left: -20%;
-  background: radial-gradient(
-      circle at 30% 40%,
-      rgba(0,180,255,0.10),
-      transparent 60%
-    ),
-    radial-gradient(
-      circle at 70% 60%,
-      rgba(0,255,200,0.08),
-      transparent 65%
-    );
-  animation: heroGlowMove 18s ease-in-out infinite alternate;
-  z-index: 0;
-}
-.glow::after {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: linear-gradient(
-    120deg,
-    rgba(0,160,255,0),
-    rgba(0,255,200,0.6),
-    rgba(0,160,255,0)
-  );
-  filter: blur(8px);
-  opacity: 0.18;
-  z-index: -1;
-}
-/* Make hero content stay above glow */
-header > * {
-  position: relative;
-  z-index: 2;
-}
-
-@keyframes heroGlowMove {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  100% {
-    transform: translate(-40px, -30px) scale(1.1);
-  }
-}
 </style>
 </head>
 
@@ -589,21 +442,27 @@ header > * {
     </video>
   </div>
   
-  <div class="hero-content">
+  section class="hero">
+    <div class="hero-content">
 
-  <div class="hero-label">
-    Research-Driven Infrastructure
-  </div>
+      <div class="hero-label">
+        Secure Authorization Infrastructure
+      </div>
 
-  <h1>
-    QUNET Token
-  </h1>
+      <h1>QUNET Token</h1>
 
-  <p class="hero-subheadline">
-    Secure Authorization & Quantum-Ready Execution Layer
-  </p>
+      <p class="hero-tagline">
+        Secure Authorization & Quantum-Ready Execution Layer
+      </p>
 
-</div>
+      <p class="hero-description">
+        Experimental research into secure authorization,
+        quantum networking logic, and execution validation.
+      </p>
+
+    </div>
+  </section>
+<header>
 
   <div class="divider"></div>
   
