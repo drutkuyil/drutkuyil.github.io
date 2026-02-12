@@ -532,22 +532,31 @@ h2 {
 .doc-card:hover::after {
   opacity: 0.7;
 }
+ #heroVideo {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+#heroVideo.ready {
+  opacity: 1;
+} 
 </style>
 </head>
 
 <body>
 
 <header>
-   <div class="logo-video">
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto">
-      <source src="assets/video/QUNET_donen_logo.mp4" type="video/mp4">
-    </video>
-  </div>
+<div class="logo-video">
+  <video
+    id="heroVideo"
+    muted
+    loop
+    playsinline
+    preload="auto"
+    poster="assets/video/logo_poster.jpg">
+    <source src="assets/video/QUNET_donen_logo.mp4" type="video/mp4">
+  </video>
+</div>
   
     <div class="hero-content">
 
@@ -1379,6 +1388,14 @@ function confirmRedirect() {
   window.open("https://www.lipas.tech", "_blank");
   closeRedirectModal();
 }
+</script>
+<script>
+const heroVideo = document.getElementById("heroVideo");
+
+heroVideo.addEventListener("canplaythrough", () => {
+  heroVideo.classList.add("ready");
+  heroVideo.play();
+});
 </script>
 </body>
 </html>
