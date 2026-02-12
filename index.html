@@ -31,12 +31,14 @@ html, body {
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(
-    180deg,
-    #0c1f44 0%,
-    #081630 40%,
-    #050b16 100%
-  );
+  background:
+    radial-gradient(1200px 600px at 50% -200px, rgba(0,180,255,0.12), transparent 70%),
+    linear-gradient(
+      180deg,
+      #0b1d3a 0%,
+      #081630 40%,
+      #050b16 100%
+    );
   color: #e6f1ff;
   line-height: 1.75;
 }
@@ -72,15 +74,15 @@ header {
   background: transparent;   /* BURASI DEĞİŞTİ */
   overflow: hidden;
 }
- header::after {
+header::after {
   content:"";
   position:absolute;
   bottom:0;
   left:0;
   width:100%;
   height:160px;
-  background: linear-gradient(to bottom, transparent, #050b16);
-  pointer-events:none;
+  background: linear-gradient(to bottom, transparent, #081630 70%, #050b16);
+  pointer-events:none; 
 } 
 header::before {
   content: "";
