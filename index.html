@@ -576,7 +576,6 @@ h2 {
       </p>
 
     </div>
-    </section>
 </header>
   <div class="divider"></div>
   
@@ -1392,9 +1391,20 @@ function confirmRedirect() {
 <script>
 const heroVideo = document.getElementById("heroVideo");
 
-heroVideo.addEventListener("canplaythrough", () => {
+<script>
+const heroVideo = document.getElementById("heroVideo");
+
+function startVideo() {
   heroVideo.classList.add("ready");
-  heroVideo.play();
+  heroVideo.play().catch(()=>{});
+}
+
+// iOS için daha stabil event
+heroVideo.addEventListener("loadeddata", startVideo);
+
+// fallback
+window.addEventListener("load", () => {
+  setTimeout(startVideo, 500);
 });
 </script>
 </body>
