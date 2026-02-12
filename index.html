@@ -497,6 +497,18 @@ h2 {
   font-size: 0.85rem;
   opacity: 0.75;
 }
+.doc-card::after {
+  content: "View Document →";
+  display: block;
+  margin-top: 14px;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.doc-card:hover::after {
+  opacity: 0.7;
+}
 </style>
 </head>
 
@@ -844,6 +856,10 @@ h2 {
     physical security zones, and high-trust digital interactions.
   </p>
 </section>
+
+<div class="divider"></div>
+  
+<section>
 <div class="documentation-grid">
 
   <a class="doc-card" href="pitch-deck/QUNET_Pitch_Deck_v1.0.pdf" target="_blank">
