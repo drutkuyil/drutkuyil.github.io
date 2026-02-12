@@ -1246,6 +1246,24 @@ document.addEventListener("DOMContentLoaded", function () {
       step.classList.toggle("active", index <= stageIndex);
     });
   };
+
+
+  /* ================= REDIRECT MODAL ================= */
+
+  window.openRedirectModal = function () {
+    document.getElementById("redirectModal").style.display = "flex";
+  };
+
+  window.closeRedirectModal = function () {
+    document.getElementById("redirectModal").style.display = "none";
+  };
+
+  window.confirmRedirect = function () {
+    window.open("https://www.lipas.tech", "_blank");
+    closeRedirectModal();
+  };
+
+
   /* ================= HERO VIDEO ================= */
 
   const heroVideo = document.getElementById("heroVideo");
@@ -1258,115 +1276,36 @@ document.addEventListener("DOMContentLoaded", function () {
     heroVideo.addEventListener("loadeddata", startVideo);
     setTimeout(startVideo, 800);
   }
-<audio id="introSound" preload="auto" loop>
-  <source src="assets/audio/intro.mp3" type="audio/mpeg">
-</audio>
+
+
+  /* ================= INTRO SOUND ================= */
 
   const introSound = document.getElementById("introSound");
-  introSound.volume = 0.2; // %20 ses
+  const toggle = document.getElementById("soundToggle");
 
-  function enableSound() {
-    introSound.play().catch(() => {});
+  if (introSound) {
+    introSound.volume = 0.2;
+
+    document.addEventListener("click", function () {
+      if (introSound.paused) {
+        introSound.play().catch(() => {});
+      }
+    });
   }
 
-  document.addEventListener("click", enableSound);
-  document.addEventListener("touchstart", enableSound);
+  if (toggle && introSound) {
+    toggle.addEventListener("click", function () {
+      if (introSound.paused) {
+        introSound.play();
+        toggle.textContent = "🔊";
+      } else {
+        introSound.pause();
+        toggle.textContent = "🔇";
+      }
+    });
+  }
 
-  <button id="soundToggle" style="
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.2);
-  color:#fff;
-  padding:10px 12px;
-  border-radius:50%;
-  backdrop-filter: blur(6px);
-">
-🔊
-</button>
-
-  const toggle = document.getElementById("soundToggle");
-  toggle.addEventListener("click", () => {
-    if (introSound.paused) {
-      introSound.play();
-      toggle.textContent = "🔊";
-    } else {
-      introSound.pause();
-      toggle.textContent = "🔇";
-    }
-  });
-  <div id="redirectModal" style="
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.75);
-  z-index:9999;
-  align-items:center;
-  justify-content:center;
-">
-
-  <div style="
-    background:#0b1320;
-    padding:30px 40px;
-    border-radius:16px;
-    text-align:center;
-    max-width:400px;
-    box-shadow:0 0 40px rgba(0,200,255,0.25);
-  ">
-
-    <h3 style="margin-top:0;">External Website Notice</h3>
-
-    <p style="opacity:0.8;">
-      You are leaving <strong>qunettoken.com</strong><br>
-      and will be redirected to:
-    </p>
-
-    <p style="color:#7fdcff; font-weight:600;">
-      www.lipas.tech
-    </p>
-
-    <div style="margin-top:25px; display:flex; gap:15px; justify-content:center;">
-
-      <button onclick="closeRedirectModal()" style="
-        padding:8px 18px;
-        background:rgba(255,255,255,0.1);
-        border:none;
-        color:white;
-        border-radius:8px;
-        cursor:pointer;
-      ">
-        Cancel
-      </button>
-
-      <button onclick="confirmRedirect()" style="
-        padding:8px 18px;
-        background:linear-gradient(90deg,#00b4ff,#00ffd5);
-        border:none;
-        color:#000;
-        font-weight:600;
-        border-radius:8px;
-        cursor:pointer;
-      ">
-        Continue
-      </button>
-
-    </div>
-
-  </div>
-</div>
-function openRedirectModal() {
-  document.getElementById("redirectModal").style.display = "flex";
-}
-
-function closeRedirectModal() {
-  document.getElementById("redirectModal").style.display = "none";
-}
-
-function confirmRedirect() {
-  window.open("https://www.lipas.tech", "_blank");
-  closeRedirectModal();
-}
+});
 </script>
 </body>
 </html>
