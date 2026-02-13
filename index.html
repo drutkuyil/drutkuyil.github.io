@@ -74,25 +74,32 @@ header {
   text-align: center;
   padding: 160px 20px;
   background: transparent;
-  overflow: hidden;
+  overflow: 
 }
+/* === ULTRA HERO ENERGY FIELD === */
 
-/* Quantum Pulse Layer */
 header::before {
   content: "";
   position: absolute;
-  inset: -20%;
-  background: radial-gradient(
-    circle at 50% 40%,
-    rgba(0,180,255,0.18),
-    rgba(0,255,200,0.08),
-    transparent 65%
-  );
-  animation: quantumPulse 6s ease-in-out infinite;
+  inset: -30%;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(0,180,255,0.22), transparent 55%),
+    radial-gradient(circle at 60% 30%, rgba(0,255,200,0.10), transparent 60%);
+  animation: energyField 8s ease-in-out infinite alternate;
   pointer-events: none;
   z-index: 0;
 }
 
+@keyframes energyField {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.12) rotate(3deg);
+    opacity: 1;
+  }
+}
 /* Smooth Fade Transition */
 header::after {
   content: "";
@@ -562,6 +569,55 @@ h2 {
 #heroVideo.ready {
   opacity: 1;
 } 
+/* === FLOATING PARTICLES === */
+
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-particles span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(0,200,255,0.6);
+  border-radius: 50%;
+  animation: floatParticle 12s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes floatParticle {
+  from {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  20% { opacity: 0.8; }
+  to {
+    transform: translateY(-800px);
+    opacity: 0;
+  }
+}
+.hero-content h1,
+.hero-content p,
+.hero-label {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeIn 1.4s ease forwards;
+}
+
+.hero-content h1 { animation-delay: 0.4s; }
+.hero-content p { animation-delay: 0.8s; }
+.hero-label { animation-delay: 0.2s; }
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
 </head>
 
@@ -579,7 +635,13 @@ h2 {
     <source src="assets/video/QUNET_donen_logo.mp4" type="video/mp4">
   </video>
 </div>
-  
+  <div class="hero-particles">
+  <span style="left:10%; animation-delay:0s;"></span>
+  <span style="left:30%; animation-delay:2s;"></span>
+  <span style="left:50%; animation-delay:4s;"></span>
+  <span style="left:70%; animation-delay:6s;"></span>
+  <span style="left:85%; animation-delay:1s;"></span>
+</div>
     <div class="hero-content">
 
       <div class="hero-label">
@@ -1423,6 +1485,18 @@ if (toggle && introSound) {
     }
   });
 }
+/* === SCROLL REACTIVE AUDIO === */
+
+window.addEventListener("scroll", function () {
+  if (!introSound) return;
+
+  const scrollY = window.scrollY;
+  const maxScroll = 600;
+
+  let intensity = Math.min(scrollY / maxScroll, 1);
+
+  introSound.volume = 0.1 + (intensity * 0.1);
+});
 });
 </script>
 </body>
