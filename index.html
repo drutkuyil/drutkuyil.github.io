@@ -632,37 +632,39 @@ header::before {
 }
 /* === MINIMAL PHOTON SWEEP (FIRST DIVIDER ONLY) === */
 
+/* === FIXED PHOTON SWEEP === */
+
 .photon-divider {
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* önemli */
 }
 
 .photon-divider::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: -180px;
-  width: 180px;
-  height: 4px;
+  left: -120px;
+  width: 120px;
+  height: 2px; /* divider ile aynı */
   transform: translateY(-50%);
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(0,200,255,0.9),
+    rgba(0,200,255,1),
     rgba(0,255,200,1),
     transparent
   );
-  filter: blur(6px);
   opacity: 0;
-  animation: minimalPhoton 8s ease-in-out infinite;
+  animation: minimalPhoton 3s linear infinite;
+  pointer-events: none;
 }
 
 @keyframes minimalPhoton {
   0% {
-    left: -180px;
+    left: -120px;
     opacity: 0;
   }
-  8% {
+  10% {
     opacity: 1;
   }
   50% {
