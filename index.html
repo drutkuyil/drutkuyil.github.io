@@ -26,6 +26,8 @@
 
 /* ================= BASE ================= */
 html, body {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 body {
@@ -65,15 +67,6 @@ p {
   opacity: 0.9;
 }
 
-/* ================= HERO ================= */
-
-header {
-  position: relative;
-  text-align: center;
-  padding: 160px 20px;
-  background: transparent;   /* BURASI DEĞİŞTİ */
-  overflow: hidden;
-}
 /* ================= HERO CINEMATIC ================= */
 
 header {
@@ -313,16 +306,15 @@ footer {
   }
 }
 .logo-video {
-  width: 260px;
-  max-width: 70vw;
+  width: 100%;
+  max-width: 420px;   /* istediğin büyüklük */
   margin: 0 auto 30px;
 }
-
 .logo-video video {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 0 18px rgba(0,200,255,0.45));
+  object-fit: contain;   /* taşmayı engeller */
 }
 /* ===== GO TO MARKET TABLE ===== */
 .market-table-wrapper {
