@@ -630,6 +630,53 @@ header::before {
   will-change: transform;
   transition: transform 0.2s ease-out;
 }
+/* === MINIMAL PHOTON SWEEP (FIRST DIVIDER ONLY) === */
+
+.photon-divider {
+  position: relative;
+  overflow: hidden;
+}
+
+.photon-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -180px;
+  width: 180px;
+  height: 4px;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0,200,255,0.9),
+    rgba(0,255,200,1),
+    transparent
+  );
+  filter: blur(6px);
+  opacity: 0;
+  animation: minimalPhoton 8s ease-in-out infinite;
+}
+
+@keyframes minimalPhoton {
+  0% {
+    left: -180px;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  50% {
+    left: 100%;
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
 </style>
 </head>
 
@@ -673,7 +720,7 @@ header::before {
 
     </div>
 </header>
-  <div class="divider"></div>
+  <div class="divider photon-divider"></div>
   
 <section>
   <h2>What is QUNET Token?</h2>
