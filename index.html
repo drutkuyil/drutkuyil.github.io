@@ -1384,33 +1384,45 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /* ================= INTRO SOUND ================= */
+  /* ================= INTRO SOUND PREMIUM ================= */
 
-  const introSound = document.getElementById("introSound");
-  const toggle = document.getElementById("soundToggle");
+const introSound = document.getElementById("introSound");
+const toggle = document.getElementById("soundToggle");
 
-  if (introSound) {
-    introSound.volume = 0.2;
+if (introSound) {
 
-    document.addEventListener("click", function () {
-      if (introSound.paused) {
-        introSound.play().catch(() => {});
-      }
-    });
+  introSound.volume = 0;
+
+  function startPremiumAudio() {
+    introSound.play().then(() => {
+
+      let vol = 0;
+      const fade = setInterval(() => {
+        vol += 0.02;
+        if (vol >= 0.2) {
+          vol = 0.2;
+          clearInterval(fade);
+        }
+        introSound.volume = vol;
+      }, 100);
+
+    }).catch(()=>{});
   }
 
-  if (toggle && introSound) {
-    toggle.addEventListener("click", function () {
-      if (introSound.paused) {
-        introSound.play();
-        toggle.textContent = "🔊";
-      } else {
-        introSound.pause();
-        toggle.textContent = "🔇";
-      }
-    });
-  }
+  document.addEventListener("pointerdown", startPremiumAudio, { once: true });
+}
 
+if (toggle && introSound) {
+  toggle.addEventListener("click", function () {
+    if (introSound.paused) {
+      introSound.play();
+      toggle.textContent = "🔊";
+    } else {
+      introSound.pause();
+      toggle.textContent = "🔇";
+    }
+  });
+}
 });
 </script>
 </body>
