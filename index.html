@@ -74,7 +74,7 @@ header {
   text-align: center;
   padding: 160px 20px;
   background: transparent;
-  overflow: 
+  overflow: hidden;
 }
 /* === ULTRA HERO ENERGY FIELD === */
 
@@ -617,6 +617,18 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* === SAFE 3D PARALLAX === */
+
+header {
+  perspective: 1000px;
+}
+
+.hero-content,
+.logo-video,
+header::before {
+  will-change: transform;
+  transition: transform 0.2s ease-out;
 }
 </style>
 </head>
@@ -1495,8 +1507,39 @@ window.addEventListener("scroll", function () {
 
   let intensity = Math.min(scrollY / maxScroll, 1);
 
-  introSound.volume = 0.1 + (intensity * 0.1);
+  introSound.volume = 0.1 + (intensity * /* === SAFE HERO PARALLAX === */
 });
+const hero = document.querySelector("header");
+const heroContent = document.querySelector(".hero-content");
+const logoVideo = document.querySelector(".logo-video");
+
+if (hero && heroContent && logoVideo && window.innerWidth > 768) {
+
+  hero.addEventListener("mousemove", (e) => {
+
+    const rect = hero.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const moveX = (x - centerX) / 40;
+    const moveY = (y - centerY) / 40;
+
+    heroContent.style.transform =
+      `translate3d(${moveX}px, ${moveY}px, 0)`;
+
+    logoVideo.style.transform =
+      `translate3d(${moveX * 0.6}px, ${moveY * 0.6}px, 0)`;
+
+  });
+
+  hero.addEventListener("mouseleave", () => {
+    heroContent.style.transform = "translate3d(0,0,0)";
+    logoVideo.style.transform = "translate3d(0,0,0)";
+  });
+ }
 });
 </script>
 </body>
